@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { TestPage } from '../pages/test/test';
 import { TelaLoginComponent } from '../components/tela-login/tela-login';
+import { TelaDashboardComponent } from '../components/tela-dashboard/tela-dashboard';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TelaLoginComponent } from '../components/tela-login/tela-login';
     ListPage,
     CadastroPage,
     TestPage,
-    TelaLoginComponent
+    TelaLoginComponent,
+    TelaDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { TelaLoginComponent } from '../components/tela-login/tela-login';
     ListPage,
     CadastroPage,
     TestPage,
-    TelaLoginComponent
+    TelaLoginComponent,
+    TelaDashboardComponent
   ],
   providers: [
     StatusBar,

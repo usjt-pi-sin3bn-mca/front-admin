@@ -34,7 +34,7 @@ var TestPage = (function () {
     };
     TestPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-test',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\test\test.html"*/'<!--\n\n  Generated template for the TestPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>test</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <tela-login></tela-login>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\test\test.html"*/,
+            selector: 'page-test',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\test\test.html"*/'<!--\n\n  Generated template for the TestPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>test</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <tela-dashboard></tela-dashboard>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\test\test.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], TestPage);
@@ -67,15 +67,15 @@ webpackEmptyAsyncContext.id = 113;
 
 var map = {
 	"../pages/cadastro/cadastro.module": [
-		281,
+		282,
 		2
 	],
 	"../pages/login/login.module": [
-		282,
+		283,
 		0
 	],
 	"../pages/test/test.module": [
-		283,
+		284,
 		1
 	]
 };
@@ -223,12 +223,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_test_test__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_tela_login_tela_login__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_tela_dashboard_tela_dashboard__ = __webpack_require__(281);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -252,7 +254,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__["a" /* CadastroPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_test_test__["a" /* TestPage */],
-                __WEBPACK_IMPORTED_MODULE_11__components_tela_login_tela_login__["a" /* TelaLoginComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__components_tela_login_tela_login__["a" /* TelaLoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_tela_dashboard_tela_dashboard__["a" /* TelaDashboardComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -272,7 +275,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__["a" /* CadastroPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_test_test__["a" /* TestPage */],
-                __WEBPACK_IMPORTED_MODULE_11__components_tela_login_tela_login__["a" /* TelaLoginComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__components_tela_login_tela_login__["a" /* TelaLoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_tela_dashboard_tela_dashboard__["a" /* TelaDashboardComponent */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
@@ -400,6 +404,46 @@ var TelaLoginComponent = (function () {
 }());
 
 //# sourceMappingURL=tela-login.js.map
+
+/***/ }),
+
+/***/ 281:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TelaDashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the TelaDashboardComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var TelaDashboardComponent = (function () {
+    function TelaDashboardComponent() {
+        console.log('Hello TelaDashboardComponent Component');
+        this.text = 'Hello World';
+    }
+    TelaDashboardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'tela-dashboard',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\components\tela-dashboard\tela-dashboard.html"*/'<div>\n\n  <div class="coluna-esquerda">\n    <div class="coluna-esquerda-cima">\n      <div class="info-usuario">\n        <img id="imgLogo" src="../assets/imgs/logo-usjt.png">\n        <label id="lblAdministracao" type="text">Administração</label>\n        <label id="lblNome" type="text">Fulano Admin</label>\n        <label id="lblEmail" type="text">s.ferguson@gmail.com</label>\n      </div>\n    </div>\n\n    <div id="coluna-esquerda-baixo">\n      <img id="imgLogo" src="../assets/imgs/tres-pontos.svg">\n      <label id="lblMinhaConta" type="text">Minha Conta</label>\n    </div>\n  </div>\n\n  <div class="sessoes">\n    <div class="cima">\n      <div id="boxPlacarOnline">\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n      </div>\n            \n      <div id="boxMarketplace">\n        <img id="imgMarketplace" src="../assets/imgs/market-place.svg">\n        <label id="lblMarketplace" type="text">Marketplace</label>\n      </div>\n    </div>\n\n    <div class="baixo">\n      <div id="boxLojaDaTorcida">\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n      </div>\n            \n      <div id="boxMinhaConta">\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n      </div>\n    </div>\n\n</div>'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\components\tela-dashboard\tela-dashboard.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], TelaDashboardComponent);
+    return TelaDashboardComponent;
+}());
+
+//# sourceMappingURL=tela-dashboard.js.map
 
 /***/ }),
 

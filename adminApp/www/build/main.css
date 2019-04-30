@@ -25684,6 +25684,149 @@ body .scroll-content, ion-content .scroll-content {
   padding: 0 !important;
 }
 
+tela-dashboard .coluna-esquerda {
+  position: fixed;
+  float: left;
+  background: #F8F8F8;
+  height: 697px;
+  width: 330px;
+  -webkit-box-shadow: -5px 5px 18px #b2bec3;
+  box-shadow: -5px 5px 18px #b2bec3;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-cima {
+  height: 50%;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  top: -18%;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #imgLogo {
+  width: 45%;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblAdministracao {
+  font-weight: bold;
+  color: #4577b1;
+  margin: 10px;
+  font-size: 17px;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblNome {
+  color: #333;
+  font-size: 17px;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblEmail {
+  color: #c4c4c4;
+  font-size: 11px;
+}
+
+tela-dashboard .sessoes {
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  background: #F4F4F4;
+  width: calc(100% - 330px);
+  height: 697px;
+  font-weight: bold;
+  padding: 6% 8%;
+}
+
+tela-dashboard .sessoes #lblLojaDaTorcida, tela-dashboard .sessoes #lblMinhaConta, tela-dashboard .sessoes #lblMarketplace, tela-dashboard .sessoes #lblPlacarOnline {
+  margin-top: 10px;
+  font-size: 33px;
+  color: #4577b1;
+}
+
+tela-dashboard .sessoes .cima #boxPlacarOnline, tela-dashboard .sessoes .cima #boxMarketplace {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  height: 280px;
+  width: 400px;
+  -webkit-box-shadow: 5px 5px 18px #b2bec3;
+  box-shadow: 5px 5px 18px #b2bec3;
+}
+
+tela-dashboard .sessoes .cima #boxPlacarOnline {
+  margin-bottom: 50px;
+}
+
+tela-dashboard .sessoes .cima #boxPlacarOnline #imgPlacarOnline {
+  width: 30%;
+}
+
+tela-dashboard .sessoes .baixo #boxLojaDaTorcida, tela-dashboard .sessoes .baixo #boxMinhaConta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #fff;
+  height: 280px;
+  width: 400px;
+  -webkit-box-shadow: -5px 5px 18px #b2bec3;
+  box-shadow: -5px 5px 18px #b2bec3;
+}
+
+tela-dashboard .sessoes .baixo #boxLojaDaTorcida {
+  margin-bottom: 50px;
+}
+
 tela-login {
   right: 0;
   top: 0;
