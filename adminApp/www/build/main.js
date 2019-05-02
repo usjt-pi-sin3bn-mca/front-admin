@@ -71,11 +71,11 @@ var map = {
 		2
 	],
 	"../pages/login/login.module": [
-		283,
+		284,
 		0
 	],
 	"../pages/test/test.module": [
-		284,
+		283,
 		1
 	]
 };
@@ -262,8 +262,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_9__angular_common_http__["b" /* HttpClientModule */]
@@ -436,7 +436,7 @@ var TelaDashboardComponent = (function () {
     }
     TelaDashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'tela-dashboard',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\components\tela-dashboard\tela-dashboard.html"*/'<div>\n\n  <div class="coluna-esquerda">\n    <div class="coluna-esquerda-cima">\n      <div class="info-usuario">\n        <img id="imgLogo" src="../assets/imgs/logo-usjt.png">\n        <label id="lblAdministracao" type="text">Administração</label>\n        <label id="lblNome" type="text">Fulano Admin</label>\n        <label id="lblEmail" type="text">s.ferguson@gmail.com</label>\n      </div>\n    </div>\n\n    <div id="coluna-esquerda-baixo">\n      <img id="imgLogo" src="../assets/imgs/tres-pontos.svg">\n      <label id="lblMinhaConta" type="text">Minha Conta</label>\n    </div>\n  </div>\n\n  <div class="sessoes">\n    <div class="cima">\n      <div id="boxPlacarOnline">\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n      </div>\n            \n      <div id="boxMarketplace">\n        <img id="imgMarketplace" src="../assets/imgs/market-place.svg">\n        <label id="lblMarketplace" type="text">Marketplace</label>\n      </div>\n    </div>\n\n    <div class="baixo">\n      <div id="boxLojaDaTorcida">\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n      </div>\n            \n      <div id="boxMinhaConta">\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n      </div>\n    </div>\n\n</div>'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\components\tela-dashboard\tela-dashboard.html"*/
+            selector: 'tela-dashboard',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\components\tela-dashboard\tela-dashboard.html"*/'<div>\n\n  <div class="coluna-esquerda">\n    \n    <div class="coluna-esquerda-cima">\n    \n      <div class="info-usuario">\n        <img id="imgLogo" src="../assets/imgs/logo-usjt.png">\n        <label id="lblAdministracao" type="text">Administração</label>\n        <label id="lblNome" type="text">Fulano Admin</label>\n        <label id="lblEmail" type="text">s.ferguson@gmail.com</label>\n      </div>\n    \n    </div>\n\n    <div class="coluna-esquerda-baixo">\n      <img id="imgLogo" src="../assets/imgs/tres-pontos.svg">\n      <label id="lblMinhaConta" type="text">Minha Conta</label>\n    </div>\n  \n  </div>\n\n  <div class="sessoes">\n  \n    <div class="cima">\n      <div id="boxPlacarOnline">\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n      </div>\n            \n      <div id="boxMarketplace">\n        <img id="imgMarketplace" src="../assets/imgs/market-place.svg">\n        <label id="lblMarketplace" type="text">Marketplace</label>\n      </div>\n  \n    </div>\n\n    <div class="baixo">\n  \n      <div id="boxLojaDaTorcida">\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n      </div>\n            \n      <div id="boxMinhaConta">\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n      </div>\n  \n    </div>\n\n</div>'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\components\tela-dashboard\tela-dashboard.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TelaDashboardComponent);
@@ -481,7 +481,7 @@ var CadastroPage = (function () {
     };
     CadastroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cadastro',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\cadastro\cadastro.html"*/'<!--\n\n  Generated template for the CadastroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>cadastro</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <h1>Cadastro</h1>\n\n    <form class="pure-form pure-form-aligned">\n\n        <fieldset>\n\n            <input type="text" placeholder="Nome">\n\n            <input type="text" placeholder="Editora">\n\n            <input type="text" placeholder="Ano">\n\n            <button type="submit">Cadastrar</button>\n\n        </fieldset>\n\n    </form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\cadastro\cadastro.html"*/,
+            selector: 'page-cadastro',template:/*ion-inline-start:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\cadastro\cadastro.html"*/'<!--\n\n  Generated template for the CadastroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>cadastro</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\mtsfn\projetos\ionic\faculdade\front-admin\adminApp\src\pages\cadastro\cadastro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], CadastroPage);

@@ -25684,6 +25684,10 @@ body .scroll-content, ion-content .scroll-content {
   padding: 0 !important;
 }
 
+tela-dashboard {
+  font-family: Arial,sans-serif;
+}
+
 tela-dashboard .coluna-esquerda {
   position: fixed;
   float: left;
@@ -25712,9 +25716,12 @@ tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 100%;
   position: relative;
-  top: -18%;
 }
 
 tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #imgLogo {
@@ -25736,6 +25743,19 @@ tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblNome {
 tela-dashboard .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblEmail {
   color: #c4c4c4;
   font-size: 11px;
+}
+
+tela-dashboard .coluna-esquerda .coluna-esquerda-baixo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
 }
 
 tela-dashboard .sessoes {
@@ -25929,22 +25949,7 @@ tela-login .coluna-direita .preencher {
   top: 30%;
 }
 
-tela-login .coluna-direita .preencher #inpUsuario {
-  border-radius: 14px;
-  margin-top: 25px;
-  color: #9FCFF6;
-  background-color: #2e638e;
-  border-color: #2e638e;
-  border: 1px;
-  height: 18%;
-  width: 100%;
-  -webkit-box-shadow: -5px 5px 16px #192a56;
-  box-shadow: -5px 5px 16px #192a56;
-  padding: 0px 13px 3px;
-  font-weight: bold;
-}
-
-tela-login .coluna-direita .preencher #inpSenha {
+tela-login .coluna-direita .preencher #inpUsuario, tela-login .coluna-direita .preencher #inpSenha {
   border-radius: 14px;
   margin-top: 25px;
   color: #9FCFF6;

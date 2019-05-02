@@ -1,6 +1,8 @@
 tela-dashboard {
+    font-family: Arial,sans-serif;
 
     .coluna-esquerda {
+        
         position: fixed;
         float: left;
         background: #F8F8F8;
@@ -9,33 +11,40 @@ tela-dashboard {
         box-shadow: -5px 5px 18px #b2bec3;
 
         .coluna-esquerda-cima {
+         
             height: 50%;
 
             .info-usuario {
+            
                 display: flex;
                 flex-direction: column;
-                align-items: center;                
+                align-items: center;
+                justify-content: center;       
                 height: 100%;
                 position: relative;
-                top: -18%;
 
                 #imgLogo {
+            
                     width: 45%;
                 }
     
                 #lblAdministracao {
+            
                     font-weight: bold;
                     color: #4577b1;
                     margin: 10px;
                     font-size: 17px;
+            
                 }
     
                 #lblNome {
+            
                     color: #333;
                     font-size: 17px;
                 }
     
                 #lblEmail {
+            
                     color: #c4c4c4;
                     font-size: 11px;
                 }
@@ -44,11 +53,21 @@ tela-dashboard {
         }
 
         .coluna-esquerda-baixo {
-            
+
+            display: flex;
+            align-items: stretch;
+            height: 100%;
+            width: 100%;
+
+            #lblMinhaConta {
+
+                
+            }
         }
     }
 
     .sessoes {
+        
         float: right;
         display: flex;
         align-items: center;
@@ -60,13 +79,16 @@ tela-dashboard {
         padding: 6% 8%; 
         
         #lblLojaDaTorcida, #lblMinhaConta, #lblMarketplace, #lblPlacarOnline {
+            
             margin-top: 10px;
             font-size: 33px;
             color: #4577b1;
         }
 
         .cima {
+        
             #boxPlacarOnline, #boxMarketplace {
+            
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -78,16 +100,20 @@ tela-dashboard {
             }
 
             #boxPlacarOnline {
+            
                 margin-bottom: 50px;
                 
                 #imgPlacarOnline {
+            
                     width: 30%;
                 }
             }
         }
         
         .baixo {
+        
             #boxLojaDaTorcida, #boxMinhaConta {
+            
                 display: flex;
                 align-items: center;
                 flex-direction: column; 
@@ -99,6 +125,7 @@ tela-dashboard {
             }
 
             #boxLojaDaTorcida {
+            
                 margin-bottom: 50px;
             }
         }
