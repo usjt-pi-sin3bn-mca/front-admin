@@ -1,0 +1,142 @@
+tela-home {
+
+    .coluna-esquerda {
+        position: fixed;
+        float: left;
+        background: #F8F8F8;
+        height: 697px;
+        width: 330px;
+        box-shadow: -5px 5px 18px #b2bec3;
+
+        .coluna-esquerda-cima {
+            height: 50%;
+
+            .info-usuario {
+                display: flex;
+                flex-direction: column;
+                align-items: center;                
+                height: 100%;
+                position: relative;
+                top: -18%;
+
+                #imgLogo {
+                    width: 45%;
+                }
+    
+                #lblAdministracao {
+                    font-weight: bold;
+                    color: #4577b1;
+                    margin: 10px;
+                    font-size: 17px;
+                }
+    
+                #lblNome {
+                    color: #333;
+                    font-size: 17px;
+                }
+    
+                #lblEmail {
+                    color: #c4c4c4;
+                    font-size: 11px;
+                }
+            }
+            
+        }
+
+        .coluna-esquerda-baixo {
+            
+        }
+    }
+
+    .sessoes {
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background: #F4F4F4;
+        width: calc(100% - 330px);
+        height: 697px;
+        font-weight: bold;
+        padding: 6% 8%; 
+        
+        .cima {
+
+            #boxPlacarOnline {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: #fff;
+                height: 280px;
+                width: 400px;
+                margin-bottom: 50px;
+                box-shadow: 5px 5px 18px #b2bec3;
+
+                #imgPlacarOnline {
+                    width: 30%;
+                }
+    
+                #lblPlacarOnline {
+                    margin-top: 10px;
+                    font-size: 33px;
+                    color: #4577b1;
+                }
+            }
+    
+            #boxMarketplace {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: #fff;
+                height: 280px;
+                width: 400px;         
+                box-shadow: -5px 5px 18px #b2bec3;
+    
+                #lblMarketplace {
+                    margin-top: 10px;
+                    font-size: 33px;
+                    color: #4577b1;
+                }
+            }
+        }
+        
+        .baixo {
+
+            #boxLojaDaTorcida {
+                display: flex;
+                align-items: center;
+                flex-direction: column; 
+                justify-content: center;
+                background: #fff;
+                height: 280px;
+                width: 400px;
+                box-shadow: -5px 5px 18px #b2bec3;
+                margin-bottom: 50px;
+                
+                #lblLojaDaTorcida {
+                    margin-top: 10px;
+                    font-size: 33px;
+                    color: #4577b1;
+                }
+            }
+    
+            #boxMinhaConta {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                background: #fff;
+                height: 280px;
+                width: 400px;
+                box-shadow: -5px 5px 18px #b2bec3;
+    
+                #lblMinhaConta {
+                    margin-top: 10px;
+                    font-size: 33px;
+                    color: #4577b1;
+                }
+            }
+        }
+    }      
+}
