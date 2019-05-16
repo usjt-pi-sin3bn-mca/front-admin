@@ -14,7 +14,8 @@ tela-home {
             .info-usuario {
                 display: flex;
                 flex-direction: column;
-                align-items: center;                
+                align-items: center;
+                justify-content: center;        
                 height: 100%;
                 position: relative;
                 top: -18%;
@@ -60,9 +61,9 @@ tela-home {
         padding: 6% 8%; 
         
         #lblPlacarOnline, #lblMarketplace, #lblLojaDaTorcida, #lblMinhaConta {
-        margin-top: 10px;
-        font-size: 33px;
-        color: #4577b1;
+            margin-top: 10px;
+            font-size: 33px;
+            color: #4577b1;
         }
 
         .cima {
@@ -76,7 +77,7 @@ tela-home {
                 height: 280px;
                 width: 400px;
                 margin-bottom: 50px;
-                box-shadow: 5px 5px 18px #b2bec3;
+                box-shadow: 15px 15px 43px 0 rgba(0, 0, 0, 0.05);
 
                 #imgPlacarOnline {
                     width: 30%;
@@ -94,7 +95,7 @@ tela-home {
                 background: #fff;
                 height: 280px;
                 width: 400px;
-                box-shadow: -5px 5px 18px #b2bec3;
+                box-shadow: 15px 15px 43px 0 rgba(0, 0, 0, 0.05);
                 margin-bottom: 50px;
             }
         }
