@@ -59,9 +59,15 @@ tela-home {
         font-weight: bold;
         padding: 6% 8%; 
         
+        #lblPlacarOnline, #lblMarketplace, #lblLojaDaTorcida, #lblMinhaConta {
+        margin-top: 10px;
+        font-size: 33px;
+        color: #4577b1;
+        }
+
         .cima {
 
-            #boxPlacarOnline {
+            #boxPlacarOnline, #boxMarketplace {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -75,35 +81,12 @@ tela-home {
                 #imgPlacarOnline {
                     width: 30%;
                 }
-    
-                #lblPlacarOnline {
-                    margin-top: 10px;
-                    font-size: 33px;
-                    color: #4577b1;
-                }
-            }
-    
-            #boxMarketplace {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                background: #fff;
-                height: 280px;
-                width: 400px;         
-                box-shadow: -5px 5px 18px #b2bec3;
-    
-                #lblMarketplace {
-                    margin-top: 10px;
-                    font-size: 33px;
-                    color: #4577b1;
-                }
             }
         }
         
         .baixo {
 
-            #boxLojaDaTorcida {
+            #boxLojaDaTorcida, #boxMinhaConta {
                 display: flex;
                 align-items: center;
                 flex-direction: column; 
@@ -113,29 +96,6 @@ tela-home {
                 width: 400px;
                 box-shadow: -5px 5px 18px #b2bec3;
                 margin-bottom: 50px;
-                
-                #lblLojaDaTorcida {
-                    margin-top: 10px;
-                    font-size: 33px;
-                    color: #4577b1;
-                }
-            }
-    
-            #boxMinhaConta {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                background: #fff;
-                height: 280px;
-                width: 400px;
-                box-shadow: -5px 5px 18px #b2bec3;
-    
-                #lblMinhaConta {
-                    margin-top: 10px;
-                    font-size: 33px;
-                    color: #4577b1;
-                }
             }
         }
     }      
