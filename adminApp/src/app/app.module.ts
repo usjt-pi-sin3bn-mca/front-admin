@@ -11,13 +11,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpClientModule } from '@angular/common/http';
+import { TestPage } from '../pages/test/test';
+import { TelaHomeComponent } from '../components/tela-home/tela-home';
+import { LoginScreenComponent } from '../components/login-screen/login-screen';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    CadastroPage
+    CadastroPage,
+    TestPage,
+    TelaHomeComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,11 @@ import { HttpClientModule } from '@angular/common/http';
     MyApp,
     HomePage,
     ListPage,
-    CadastroPage
+    CadastroPage,
+    TestPage,
+    TelaHomeComponent,
+    LoginScreenComponent
+
   ],
   providers: [
     StatusBar,
