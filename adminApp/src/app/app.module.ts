@@ -12,6 +12,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PlacarPage } from '../pages/placar/placar';
+import { TestPage } from '../pages/test/test';
+import { TelaHomeComponent } from '../components/tela-home/tela-home';
+import { LoginScreenComponent } from '../components/login-screen/login-screen';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { PlacarPage } from '../pages/placar/placar';
     HomePage,
     ListPage,
     CadastroPage,
-    PlacarPage
+    PlacarPage,
+    TestPage,
+    TelaHomeComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,9 @@ import { PlacarPage } from '../pages/placar/placar';
     ListPage,
     CadastroPage,
     PlacarPage
+    TestPage,
+    TelaHomeComponent,
+    LoginScreenComponent
   ],
   providers: [
     StatusBar,
