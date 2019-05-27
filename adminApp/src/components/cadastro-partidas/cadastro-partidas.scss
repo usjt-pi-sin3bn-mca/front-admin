@@ -1,0 +1,187 @@
+cadastro-partidas {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4F4;
+    background-size: 100%;
+    width: calc(100% - 300px);
+    height: 100%;
+    margin-left: 300px;
+
+//resets
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+input {
+border-width: 0;
+border-style: initial;
+border-color: initial;
+border-image: initial;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.central {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0px 5px 25px #b2bec3;
+    padding: 20px;
+
+}
+
+.titulo-cadastro {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 51px;
+    display: flex;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+.titulo-partida {
+    margin: 20px;
+    width: 156px;
+    height: 35px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #4577b1;
+    }
+}
+
+.adicionar-partida {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0f558b;
+    margin-top: 10px;
+}
+
+.times {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 45px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #0f558b;
+    margin-top: 15px;
+}
+
+.usjt-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.novo-adversario {
+    display: flex;
+    width:50%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+
+.adversario-titulo {
+    font-size: 25px;
+    color: #d7d7d7;
+}
+    
+.adversario-info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+.adversario-info-input {
+    border-radius: 20px;
+    margin: 10px;
+    padding: 8px;
+    background-color: #f8f8f8;
+}
+.adversario-info-input::placeholder, .adversario-info-input::-webkit-input-placeholder, .adversario-info-input::-moz-placeholder,
+.adversario-info-input:-ms-input-placeholder, .adversario-info-input:-moz-placeholder {
+    color: #9d9d9d;
+}
+}
+
+
+
+.partida-info{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    
+.detalhes-partida{
+    font-size: 35px;
+    color: #0f558b;
+}
+    
+.partida-info-input {
+    border-radius: 20px;
+    margin: 10px;
+    padding: 8px;
+    background-color: #f8f8f8;
+    width: 175px;
+}
+
+.partida-info-form{
+    white-space: nowrap;
+}
+
+.partida-info-input::placeholder, .partida-info-input::-webkit-input-placeholder, .partida-info-input::-moz-placeholder,
+.partida-info-input:-ms-input-placeholder, .partida-info-input:-moz-placeholder {
+    color: #9d9d9d;
+}
+}
+
+.position-botao{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+
+.botao-avancar {
+    display: flex;
+    justify-content: center;
+    width: 181px;
+    height: 42px;
+    border-radius: 20px;
+    background-color: #b2d16f;
+
+.avancar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 26px;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+}
+
+}
+
+}

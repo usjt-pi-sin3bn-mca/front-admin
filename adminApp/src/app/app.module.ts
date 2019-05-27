@@ -13,8 +13,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { PlacarPage } from '../pages/placar/placar';
 import { TestPage } from '../pages/test/test';
+import { CadastrarPartidaPage } from '../pages/cadastrar-partida/cadastrar-partida';
 import { TelaHomeComponent } from '../components/tela-home/tela-home';
 import { LoginScreenComponent } from '../components/login-screen/login-screen';
+import { CadastroPartidasComponent } from '../components/cadastro-partidas/cadastro-partidas';
+import { MenuLateralComponent } from '../components/menu-lateral/menu-lateral';
+import { PlacarOnlineComponent } from '../components/placar-online/placar-online';
 
 @NgModule({
   declarations: [
@@ -23,9 +27,13 @@ import { LoginScreenComponent } from '../components/login-screen/login-screen';
     ListPage,
     CadastroPage,
     PlacarPage,
+    CadastrarPartidaPage,
     TestPage,
     TelaHomeComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    CadastroPartidasComponent,
+    MenuLateralComponent,
+    PlacarOnlineComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +46,14 @@ import { LoginScreenComponent } from '../components/login-screen/login-screen';
     HomePage,
     ListPage,
     CadastroPage,
-    PlacarPage
+    PlacarPage,
+    CadastrarPartidaPage,
     TestPage,
     TelaHomeComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    CadastroPartidasComponent,
+    MenuLateralComponent,
+    PlacarOnlineComponent
   ],
   providers: [
     StatusBar,
