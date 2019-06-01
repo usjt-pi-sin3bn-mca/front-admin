@@ -20,8 +20,10 @@ body, ion-content {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  
+  height: 100%;
+  box-sizing:	content-box !important; 
   .scroll-content {
     padding: 0 !important;
+    contain: none;
   }
 }

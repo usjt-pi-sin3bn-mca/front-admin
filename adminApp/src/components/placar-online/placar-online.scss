@@ -5,7 +5,6 @@ placar-online {
     background-color: #F4F4F4;
     background-size: 100%;
     width: calc(100% - 300px);
-    height: 100%;
     margin-left: 300px;
 
 p {
@@ -39,10 +38,11 @@ button {
     justify-content: flex-start;
     flex-direction: column;
     width: 800px;
-    height: 600px;
+    height: 100%;
     background-color: white;
     box-shadow: 0px 5px 25px #b2bec3;
     padding: 20px;
+    margin: 50px;
 }
 
 .titulo-cadastro {
@@ -86,6 +86,8 @@ button {
     background-color:#dee9f5;
     margin-bottom: 20px;
     margin-left: -20px;
+    padding: 10px;
+
 .position-titulo-acoes{
     display:flex;
     justify-content: center;
@@ -99,17 +101,31 @@ button {
 }
 
 }
-.position-botao {
+
+.position-botoes {
+    display: flex;
+
+.botao-esquerda {
     display: flex;
     justify-content: space-around;
-    
+    width: 50%;
+}
+
+.botao-direita {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+
 .botao-acao-fonte {
 font-size: 15px;
 font-weight: bold;
 color: #ffffff;
 }
-.botao-avancar {
-    width: 135px;
+
+.botao-adicionar {
+    width: 150px;
     height: 30px;
     border-radius: 20px;
     background-color: #245fab;
@@ -128,8 +144,8 @@ color: #ffffff;
     border-radius: 20px;
     background-color: #f85959;
 }
-
 }
+
 
 }
 
