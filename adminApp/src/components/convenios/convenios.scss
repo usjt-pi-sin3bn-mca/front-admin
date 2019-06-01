@@ -1,0 +1,138 @@
+convenios {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4F4;
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    height: 100%;
+
+.central {
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 800px;
+    background-color: white;
+    box-shadow: 0px 5px 25px #b2bec3;
+    padding: 20px;
+    margin: 50px;
+}   
+
+//resets
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+input {
+border-width: 0;
+border-style: initial;
+border-color: initial;
+border-image: initial;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.titulo-cadastro {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 51px;
+    display: flex;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+.icone-convenio {
+    width: 71px;
+    height: 71px;
+}
+
+.titulo-partida {
+    margin: 20px;
+    width: 250px;
+    height: 71x;
+    font-size: 23px;
+    font-weight: bold;
+    color: #4577b1;
+}
+
+}
+
+.cadastro-de-convenios {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0f558b;
+    margin-top: 10px;
+}
+
+.convenios {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #0f558b;
+    margin-top: 15px;
+}
+
+.convenio-info-input {
+    border-radius: 20px;
+    margin: 5px;
+    padding: 8px;
+    width: 300px;
+    background-color: #f8f8f8;
+}
+
+.convenio-info-input::placeholder, .convenio-info-input::-webkit-input-placeholder, .convenio-info-input::-moz-placeholder,
+.convenio-info-input:-ms-input-placeholder, .convenio-info-input:-moz-placeholder {
+    color: #9d9d9d;
+}
+
+.convenio-descricao{
+    border-radius: 20px;
+    margin: 5px;
+    padding: 8px;
+    width: 300px;
+    height: 100px;
+    background-color: #f8f8f8;
+}
+
+.position-botao{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+
+.botao-cadastrar {
+    width: 181px;
+    height: 42px;
+    border-radius: 20px;
+    background-color: #b2d16f;
+}
+
+.cadastrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+}
+
+}

@@ -5,19 +5,22 @@ import { LoginScreenComponent } from './login-screen/login-screen';
 import { CadastroPartidasComponent } from './cadastro-partidas/cadastro-partidas';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral';
 import { PlacarOnlineComponent } from './placar-online/placar-online';
+import { ConveniosComponent } from './convenios/convenios';
 @NgModule({
 	declarations: [FormLoginComponent,
     TelaHomeComponent,
     LoginScreenComponent,
     CadastroPartidasComponent,
     MenuLateralComponent,
-    PlacarOnlineComponent],
+    PlacarOnlineComponent,
+    ConveniosComponent],
 	imports: [],
 	exports: [FormLoginComponent,
     TelaHomeComponent,
     LoginScreenComponent,
     CadastroPartidasComponent,
     MenuLateralComponent,
-    PlacarOnlineComponent]
+    PlacarOnlineComponent,
+    ConveniosComponent]
 })
 export class ComponentsModule {}
