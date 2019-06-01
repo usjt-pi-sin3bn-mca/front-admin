@@ -25684,63 +25684,7 @@ body .scroll-content, ion-content .scroll-content {
   padding: 0 !important;
 }
 
-page-home {
-  padding: 0;
-}
-
-.background h3 {
-  color: #fff;
-  width: 100%;
-  text-align: center;
-}
-
-page-placar .header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  padding: 5px;
-}
-
-page-placar .icon-img-header {
-  width: 51px;
-  height: 51px;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-page-placar .titulo-header {
-  margin-left: 10px;
-  font-family: Poppins;
-  font-size: 23px;
-  color: #4577b1;
-}
-
-page-placar .titulo-body {
-  margin-left: 10px;
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  font-family: Poppins;
-  font-size: 35px;
-  color: #0f558b;
-}
-
-page-placar .casa-visitante {
+cadastro-partidas {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25749,33 +25693,999 @@ page-placar .casa-visitante {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: Poppins;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  background-size: 100%;
+  width: calc(100% - 300px);
+  height: 100%;
+  margin-left: 300px;
+}
+
+cadastro-partidas p {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+}
+
+cadastro-partidas input {
+  border-width: 0;
+  border-style: initial;
+  border-color: initial;
+  -o-border-image: initial;
+  border-image: initial;
+}
+
+cadastro-partidas .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+cadastro-partidas .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+cadastro-partidas .central {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 800px;
+  height: 600px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 25px #b2bec3;
+  box-shadow: 0px 5px 25px #b2bec3;
+  padding: 20px;
+}
+
+cadastro-partidas .titulo-cadastro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 51px;
+  display: flex;
+  font-weight: bold;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+cadastro-partidas .titulo-cadastro .titulo-partida {
+  margin: 20px;
+  width: 156px;
+  height: 35px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #4577b1;
+}
+
+cadastro-partidas .adicionar-partida {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0f558b;
+  margin-top: 10px;
+}
+
+cadastro-partidas .times {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  width: 100%;
+  height: 45px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0f558b;
+  margin-top: 15px;
+}
+
+cadastro-partidas .usjt-icon {
+  width: 100px;
+  height: 100px;
+}
+
+cadastro-partidas .novo-adversario {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+cadastro-partidas .novo-adversario .adversario-titulo {
   font-size: 25px;
   color: #d7d7d7;
 }
 
-page-placar .pontuacao {
-  font-family: Poppins;
+cadastro-partidas .novo-adversario .adversario-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+cadastro-partidas .novo-adversario .adversario-info-input {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 8px;
+  background-color: #f8f8f8;
+}
+
+cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-moz-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input:-ms-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input:-moz-placeholder {
+  color: #9d9d9d;
+}
+
+cadastro-partidas .novo-adversario .adversario-info-input::placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-moz-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input:-ms-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input:-moz-placeholder {
+  color: #9d9d9d;
+}
+
+cadastro-partidas .partida-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+cadastro-partidas .partida-info .detalhes-partida {
+  font-size: 35px;
+  color: #0f558b;
+}
+
+cadastro-partidas .partida-info .partida-info-input {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 8px;
+  background-color: #f8f8f8;
+  width: 175px;
+}
+
+cadastro-partidas .partida-info .partida-info-form {
+  white-space: nowrap;
+}
+
+cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder, cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder, cadastro-partidas .partida-info .partida-info-input::-moz-placeholder,
+cadastro-partidas .partida-info .partida-info-input:-ms-input-placeholder, cadastro-partidas .partida-info .partida-info-input:-moz-placeholder {
+  color: #9d9d9d;
+}
+
+cadastro-partidas .partida-info .partida-info-input::placeholder, cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder, cadastro-partidas .partida-info .partida-info-input::-moz-placeholder,
+cadastro-partidas .partida-info .partida-info-input:-ms-input-placeholder, cadastro-partidas .partida-info .partida-info-input:-moz-placeholder {
+  color: #9d9d9d;
+}
+
+cadastro-partidas .position-botao {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+cadastro-partidas .position-botao .botao-avancar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 181px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: #b2d16f;
+}
+
+cadastro-partidas .position-botao .botao-avancar .avancar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 75px;
+  height: 26px;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+login-screen {
+  right: 0;
+  top: 0;
+}
+
+login-screen .coluna-esquerda {
+  float: left;
+}
+
+login-screen .coluna-esquerda #imgTime {
+  left: -4px;
+  position: fixed;
+  height: 100%;
+  width: calc(100% - 300px);
+}
+
+login-screen .coluna-direita {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  float: right;
+  height: 100%;
+  width: 410px;
+  background: #184a72;
+  right: 0;
+  top: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+login-screen .coluna-direita .form-login {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 50px;
+  height: 65%;
+  position: relative;
+  top: -15%;
+}
+
+login-screen .coluna-direita #imgLogo {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+login-screen .coluna-direita #lblAdministracao {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: #6699c2;
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 10px;
+  text-shadow: -5px 5px 16px #192a56;
+}
+
+login-screen .coluna-direita .preencher {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 47%;
+  width: 100%;
+  position: relative;
+  top: 30%;
+}
+
+login-screen .coluna-direita .preencher #inpUsuario, login-screen .coluna-direita .preencher #inpSenha {
+  border-radius: 14px;
+  margin-top: 25px;
+  color: #9FCFF6;
+  background-color: #2e638e;
+  border-color: #2e638e;
+  border: 1px;
+  height: 18%;
+  width: 100%;
+  -webkit-box-shadow: -5px 5px 16px #192a56;
+  box-shadow: -5px 5px 16px #192a56;
+  padding: 0px 13px 3px;
+  font-weight: bold;
+}
+
+login-screen .coluna-direita .preencher #btnEntrar {
+  border-radius: 14px;
+  background-color: #86a83d;
+  margin-top: 20px;
+  height: 18%;
+  width: 100%;
+  color: #fff;
+  -webkit-box-shadow: -5px 5px 16px #192a56;
+  box-shadow: -5px 5px 16px #192a56;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+login-screen ::-webkit-input-placeholder {
+  color: #9fcff6;
+  font-weight: bold;
+}
+
+menu-lateral .coluna-esquerda {
+  position: fixed;
+  float: left;
+  background: #F8F8F8;
+  height: 100%;
+  width: 300px;
+  -webkit-box-shadow: -5px 5px 18px #b2bec3;
+  box-shadow: -5px 5px 18px #b2bec3;
+  padding-top: 100px;
+}
+
+menu-lateral .coluna-esquerda .coluna-esquerda-cima {
+  height: 50%;
+}
+
+menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  top: -18%;
+}
+
+menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #imgLogo {
+  width: 45%;
+}
+
+menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblAdministracao {
+  font-weight: bold;
+  color: #4577b1;
+  margin: 10px;
+  font-size: 17px;
+}
+
+menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblNome {
+  color: #333;
+  font-size: 17px;
+}
+
+menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblEmail {
+  color: #c4c4c4;
+  font-size: 11px;
+}
+
+placar-online {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  background-size: 100%;
+  width: calc(100% - 300px);
+  height: 100%;
+  margin-left: 300px;
+}
+
+placar-online p {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+}
+
+placar-online input {
+  border-width: 0;
+  border-style: initial;
+  border-color: initial;
+  -o-border-image: initial;
+  border-image: initial;
+}
+
+placar-online button {
+  font-family: sans-serif;
+}
+
+placar-online .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+placar-online .flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+placar-online .central {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 800px;
+  height: 600px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 25px #b2bec3;
+  box-shadow: 0px 5px 25px #b2bec3;
+  padding: 20px;
+}
+
+placar-online .titulo-cadastro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 51px;
+  display: flex;
+  font-weight: bold;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+placar-online .titulo-cadastro .titulo-partida {
+  margin: 20px;
+  width: 156px;
+  height: 35px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #4577b1;
+}
+
+placar-online .placar-tempo-real {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  width: 100%;
+  height: 45px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0f558b;
+  margin: 15px 0px;
+}
+
+placar-online .acoes-partida {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 800px;
+  height: 91px;
+  background-color: #dee9f5;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+
+placar-online .acoes-partida .position-titulo-acoes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  height: 35px;
+}
+
+placar-online .acoes-partida .position-titulo-acoes .titulo-acoes {
+  font-size: 15px;
+  font-weight: bold;
+  color: #245fab;
+}
+
+placar-online .acoes-partida .position-botao {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+placar-online .acoes-partida .position-botao .botao-acao-fonte {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+placar-online .acoes-partida .position-botao .botao-avancar {
+  width: 135px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #245fab;
+}
+
+placar-online .acoes-partida .position-botao .botao-atualizar {
+  width: 166px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #21dd29;
+}
+
+placar-online .acoes-partida .position-botao .botao-finalizar {
+  width: 166.2px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #f85959;
+}
+
+placar-online .sets-position {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+placar-online .sets-position .sets {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 20px;
+  color: #0f558b;
+  font-weight: bold;
+}
+
+placar-online .sets-finalizado-pai {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+placar-online .sets-finalizado-pai .position-time1-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+}
+
+placar-online .sets-finalizado-pai .time-info {
+  font-size: 25px;
+  font-weight: bold;
+  color: #d7d7d7;
+}
+
+placar-online .sets-finalizado-pai .time-pontos {
   font-size: 66px;
+  font-weight: bold;
+  color: #d7d7d7;
+}
+
+placar-online .sets-finalizado-pai .position-set-finalizado {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+placar-online .sets-finalizado-pai .position-set-finalizado .set-finalizado {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d7d7d7;
+}
+
+placar-online .sets-ativo-pai {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+placar-online .sets-ativo-pai .position-placar-botao {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+placar-online .sets-ativo-pai .botao-menos {
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+placar-online .sets-ativo-pai .botao-mais {
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+placar-online .sets-ativo-pai .position-time2-info {
+  width: 100%;
+  padding: 15px;
+}
+
+placar-online .sets-ativo-pai .time-info {
+  font-size: 25px;
+  font-weight: bold;
+  color: #d7d7d7;
+}
+
+placar-online .sets-ativo-pai .pontos {
+  font-size: 66px;
+  font-weight: bold;
   color: #000000;
 }
 
-page-placar .img-pontuar {
-  width: 28px;
-  height: 38px;
-  margin: 25px;
-  -o-object-fit: contain;
-  object-fit: contain;
+placar-online .position-botao-sets {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-page-placar .btn-pose-bola {
-  width: 756px;
-  height: 612px;
+placar-online .position-botao-sets .botao-atualizar-set {
+  width: 135px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #54b658;
+}
+
+placar-online .position-botao-sets .botao-fonte {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+placar-online .position-botao-sets .botao-finalizar-set {
+  width: 135px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #872727;
+}
+
+placar-online .posse-bola-titulo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+placar-online .posse-bola-titulo .posse-fonte {
+  font-size: 15px;
+  font-weight: bold;
+  color: #919191;
+}
+
+placar-online .posse-bola-titulo .botao-posse-ativa {
+  width: 112px;
+  height: 28px;
+  border-radius: 20px;
+  background-color: #4987b7;
+}
+
+placar-online .posse-bola-titulo .botao-posse-desativada {
+  width: 112px;
+  height: 28px;
+  border-radius: 20px;
+  background-color: #d7d7d7;
+}
+
+tela-home .sessoes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  background-color: #F4F4F4;
+  background-size: 100%;
+  width: calc(100% - 300px);
+  float: right;
+  height: 100%;
+  font-weight: bold;
+}
+
+tela-home .sessoes #lblPlacarOnline, tela-home .sessoes #lblMarketplace, tela-home .sessoes #lblLojaDaTorcida, tela-home .sessoes #lblMinhaConta {
+  margin-top: 10px;
+  font-size: 33px;
+  color: #4577b1;
+}
+
+tela-home .sessoes .cima #boxPlacarOnline, tela-home .sessoes .cima #boxMarketplace {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  height: 230px;
+  width: 330px;
+  margin-bottom: 50px;
   -webkit-box-shadow: 15px 15px 43px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 15px 15px 43px 0 rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
 }
 
-page-placar ion-content {
-  margin-top: 40px;
+tela-home .sessoes .cima #boxPlacarOnline #imgPlacarOnline, tela-home .sessoes .cima #boxMarketplace #imgPlacarOnline {
+  width: 30%;
+}
+
+tela-home .sessoes .baixo #boxLojaDaTorcida, tela-home .sessoes .baixo #boxMinhaConta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #fff;
+  height: 230px;
+  width: 330px;
+  -webkit-box-shadow: 15px 15px 43px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 15px 15px 43px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+page-home {
+  padding: 0;
+}
+
+.background h3 {
+  color: #fff;
+  width: 100%;
+  text-align: center;
 }

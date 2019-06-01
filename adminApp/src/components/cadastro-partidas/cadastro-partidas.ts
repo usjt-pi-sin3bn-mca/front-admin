@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import 'rxjs/add/operator/map';
 
 /**
  * Generated class for the CadastroPartidasComponent component.
@@ -11,12 +13,37 @@ import { Component } from '@angular/core';
   templateUrl: 'cadastro-partidas.html'
 })
 export class CadastroPartidasComponent {
+  private baseApiPath = 'http://jazz.lucasduarte.club/api/';
+  public apiResult: any;
+  listaPartidas: any;
+  partidaAtual: any;
+  idPartidaAtual: number;
+  data: any;
 
-  text: string;
+  constructor(public http: HttpClient) {
+  }
 
-  constructor() {
-    console.log('Hello CadastroPartidasComponent Component');
-    this.text = 'Hello World';
+  connectApi() {
+    let url = this.baseApiPath + 'partidas/';
+
+    if (this.data) {
+      return Promise.resolve(this.data);
+    }
+
+    return new Promise(resolve => {
+      this.http
+        .get(url)
+        .map(res => res)
+        .subscribe(data => {
+          this.data = data;
+          resolve(this.data);
+          console.log("passou", this.data);
+        },
+        (error) => {
+          console.log("Erro no provider de partidas");
+        });
+    });
+
   }
 
 }

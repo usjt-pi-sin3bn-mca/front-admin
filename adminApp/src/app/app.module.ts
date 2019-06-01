@@ -19,6 +19,7 @@ import { LoginScreenComponent } from '../components/login-screen/login-screen';
 import { CadastroPartidasComponent } from '../components/cadastro-partidas/cadastro-partidas';
 import { MenuLateralComponent } from '../components/menu-lateral/menu-lateral';
 import { PlacarOnlineComponent } from '../components/placar-online/placar-online';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PlacarOnlineComponent } from '../components/placar-online/placar-online
     CadastrarPartidaPage,
     TestPage,
     TelaHomeComponent,
+    LoginPage,
     LoginScreenComponent,
     CadastroPartidasComponent,
     MenuLateralComponent,
@@ -50,6 +52,7 @@ import { PlacarOnlineComponent } from '../components/placar-online/placar-online
     CadastrarPartidaPage,
     TestPage,
     TelaHomeComponent,
+    LoginPage,
     LoginScreenComponent,
     CadastroPartidasComponent,
     MenuLateralComponent,
