@@ -20,6 +20,7 @@ import { CadastroPartidasComponent } from '../components/cadastro-partidas/cadas
 import { MenuLateralComponent } from '../components/menu-lateral/menu-lateral';
 import { PlacarOnlineComponent } from '../components/placar-online/placar-online';
 import { LoginPage } from '../pages/login/login';
+import { ProviderPartidasProvider } from '../providers/provider-partidas/provider-partidas';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { LoginPage } from '../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProviderPartidasProvider
   ]
 })
 export class AppModule {}
