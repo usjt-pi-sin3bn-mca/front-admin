@@ -79,7 +79,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <menu-lateral></menu-lateral>\n\n  <login-screen></login-screen>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], LoginPage);
@@ -311,12 +311,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_menu_lateral_menu_lateral__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_placar_online_placar_online__ = __webpack_require__(287);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_login_login__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_provider_partidas_provider_partidas__ = __webpack_require__(294);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -388,7 +390,8 @@ var AppModule = (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_19__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]
             ]
         })
     ], AppModule);
@@ -466,15 +469,14 @@ var MyApp = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -549,6 +551,8 @@ var ListPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TelaHomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -559,6 +563,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 /**
  * Generated class for the TelaHomeComponent component.
  *
@@ -566,17 +572,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Components.
  */
 var TelaHomeComponent = (function () {
-    function TelaHomeComponent() {
-        console.log('Hello TelaHomeComponent Component');
-        this.text = 'Hello World';
+    function TelaHomeComponent(navCtrl) {
+        this.navCtrl = navCtrl;
+        // this.user.email = "";
+        // this.user.senha = "";
+        this.pages = [
+            { title: 'Cadastrar Partida', component: __WEBPACK_IMPORTED_MODULE_2__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */] }
+        ];
     }
+    TelaHomeComponent.prototype.openCadastroPartidas = function ($param) {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */]);
+    };
     TelaHomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'tela-home',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/'  <div class="sessoes">\n\n    <div class="cima">\n\n      <div id="boxPlacarOnline">\n\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n\n      </div>\n\n            \n\n      <div id="boxMarketplace">\n\n        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">\n\n        <label id="lblMarketplace" type="text">Marketplace</label>\n\n      </div>\n\n    </div>\n\n\n\n    <div class="baixo">\n\n      <div id="boxLojaDaTorcida">\n\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n\n      </div>\n\n            \n\n      <div id="boxMinhaConta">\n\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n\n      </div>\n\n    </div>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/
+            selector: 'tela-home',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/'  <div class="sessoes">\n\n    <div class="cima">\n\n      <div id="boxPlacarOnline" (click)="openCadastroPartidas()">\n\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n\n      </div>\n\n            \n\n      <div id="boxMarketplace">\n\n        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">\n\n        <label id="lblMarketplace" type="text">Marketplace</label>\n\n      </div>\n\n    </div>\n\n\n\n    <div class="baixo">\n\n      <div id="boxLojaDaTorcida">\n\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n\n      </div>\n\n            \n\n      <div id="boxMinhaConta">\n\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n\n      </div>\n\n    </div>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
     ], TelaHomeComponent);
     return TelaHomeComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=tela-home.js.map
@@ -629,9 +643,6 @@ var LoginScreenComponent = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPartidasComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -642,8 +653,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
 /**
  * Generated class for the CadastroPartidasComponent component.
  *
@@ -651,37 +660,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Components.
  */
 var CadastroPartidasComponent = (function () {
-    function CadastroPartidasComponent(http) {
-        this.http = http;
-        this.baseApiPath = 'http://jazz.lucasduarte.club/api/';
+    function CadastroPartidasComponent() {
+        console.log('Hello CadastroPartidasComponent Component');
+        this.text = 'Hello World';
     }
-    CadastroPartidasComponent.prototype.connectApi = function () {
-        var _this = this;
-        var url = this.baseApiPath + 'partidas/';
-        if (this.data) {
-            return Promise.resolve(this.data);
-        }
-        return new Promise(function (resolve) {
-            _this.http
-                .get(url)
-                .map(function (res) { return res; })
-                .subscribe(function (data) {
-                _this.data = data;
-                resolve(_this.data);
-                console.log("passou", _this.data);
-            }, function (error) {
-                console.log("Erro no provider de partidas");
-            });
-        });
-    };
     CadastroPartidasComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'cadastro-partidas',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/'<div class="central">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="adicionar-partida">\n\n      <p class="flex">Adicionar partida</p>\n\n  </div>\n\n\n\n  <div class="times">\n\n    <p class="flex">TIMES</p>\n\n  </div>\n\n\n\n  <div class="novo-adversario">\n\n    <img src="../../assets/imgs/logo-usjt.png" class="usjt-icon">\n\n\n\n    <div class="adversario-info">\n\n      <p class="adversario-titulo">Adversário</p>\n\n\n\n    <form class="flex flex-column">\n\n        <input type="text" placeholder="Nome do time" class="adversario-info-input">\n\n        <input type="text" placeholder="URL do logo" class="adversario-info-input">\n\n    </form>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="partida-info">\n\n    <p class="detalhes-partida">DETALHES DA PARTIDA</p>\n\n\n\n    <form class="partida-info-form">\n\n      <div>\n\n        <input type="text" placeholder="Nome do time" class="partida-info-input">\n\n        <input type="text" placeholder="URL do logo" class="partida-info-input">\n\n        <input type="text" placeholder="URL do logo" class="partida-info-input">\n\n      </div>\n\n      <div>\n\n        <input type="text" placeholder="URL do logo" class="partida-info-input">\n\n        <input type="text" placeholder="URL do logo" class="partida-info-input">\n\n      </div>\n\n    </form>\n\n\n\n    <div class="position-botao">\n\n      <button class="botao-avancar"><p class="avancar">Avançar</p></button>\n\n    </div>\n\n  </div>\n\n</div>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [])
     ], CadastroPartidasComponent);
     return CadastroPartidasComponent;
-    var _a;
 }());
 
 //# sourceMappingURL=cadastro-partidas.js.map
@@ -765,6 +754,67 @@ var PlacarOnlineComponent = (function () {
 }());
 
 //# sourceMappingURL=placar-online.js.map
+
+/***/ }),
+
+/***/ 294:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProviderPartidasProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the ProviderPartidasProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ProviderPartidasProvider = (function () {
+    function ProviderPartidasProvider(http) {
+        this.http = http;
+        this.baseApiPath = 'http://jazz.lucasduarte.club/api/';
+        console.log('Hello ProviderPartidasProvider');
+    }
+    ProviderPartidasProvider.prototype.getAllPartidas = function () {
+        var _this = this;
+        var url = this.baseApiPath + 'partidas/';
+        if (this.data) {
+            return Promise.resolve(this.data);
+        }
+        return new Promise(function (resolve) {
+            _this.http
+                .get(url)
+                .map(function (res) { return res; })
+                .subscribe(function (data) {
+                _this.data = data;
+                resolve(_this.data);
+                console.log("passou", _this.data);
+            }, function (error) {
+                console.log("Erro no provider de partidas");
+            });
+        });
+    };
+    ProviderPartidasProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], ProviderPartidasProvider);
+    return ProviderPartidasProvider;
+    var _a;
+}());
+
+//# sourceMappingURL=provider-partidas.js.map
 
 /***/ }),
 
