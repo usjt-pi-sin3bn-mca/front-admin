@@ -11,6 +11,10 @@ tela-home {
         height: 100%;
         font-weight: bold;
 
+        .box {
+            cursor: pointer;
+        }
+
         
         #lblPlacarOnline, #lblMarketplace, #lblLojaDaTorcida, #lblMinhaConta {
             margin-top: 10px;

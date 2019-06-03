@@ -1,4 +1,4 @@
-<div class="central">
+<div class="central" *ngIf="!partidaEmAndamento">
   <div class="titulo-cadastro">
     <img src="../../assets/imgs/icon-hearder-placar.png">
     <div>
@@ -21,8 +21,8 @@
       <p class="adversario-titulo">Adversário</p>
 
     <form class="flex flex-column">
-        <input type="text" placeholder="Nome do time" class="adversario-info-input">
-        <input type="text" placeholder="URL do logo" class="adversario-info-input">
+        <input type="text" [(ngModel)]="timeB" name="timeB" placeholder="Nome do time" class="adversario-info-input">
+        <input type="text" [(ngModel)]="urlLogoAdv" name="urlLogoAdv" placeholder="URL do logo" class="adversario-info-input">
     </form>
     </div>
   </div>
@@ -32,18 +32,22 @@
 
     <form class="partida-info-form">
       <div>
-        <input type="text" placeholder="Nome do time" class="partida-info-input">
-        <input type="text" placeholder="URL do logo" class="partida-info-input">
-        <input type="text" placeholder="URL do logo" class="partida-info-input">
+        <input type="text" [(ngModel)]="data" name="data" placeholder="Data" class="partida-info-input">
+        <input type="text" [(ngModel)]="hora" name="hora" placeholder="Horário" class="partida-info-input">
+        <input type="text" [(ngModel)]="local" name="local" placeholder="Local" class="partida-info-input">
       </div>
       <div>
-        <input type="text" placeholder="URL do logo" class="partida-info-input">
-        <input type="text" placeholder="URL do logo" class="partida-info-input">
+        <input type="text" [(ngModel)]="campeonatoNome" name="campeonatoNome" placeholder="Campeonato" class="partida-info-input">
+        <input type="text" [(ngModel)]="visitante" name="visitante" placeholder="São Judas como visitante?" class="partida-info-input">
       </div>
     </form>
 
     <div class="position-botao">
-      <button class="botao-avancar"><p class="avancar">Avançar</p></button>
+      <button class="botao-avancar" (click)="sendRequest()">
+        <p class="avancar">Avançar</p>
+      </button>
     </div>
   </div>
 </div>
+
+<placar-online *ngIf="partidaEmAndamento"></placar-online>
