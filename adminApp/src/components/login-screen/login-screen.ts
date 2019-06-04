@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home'
 
 /**
  * Generated class for the LoginScreenComponent component.
@@ -14,9 +16,12 @@ export class LoginScreenComponent {
 
   text: string;
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
     console.log('Hello LoginScreenComponent Component');
     this.text = 'Hello World';
   }
 
+  goHome() {
+    this.navCtrl.setRoot(HomePage);
+  }
 }

@@ -25678,10 +25678,14 @@ body, ion-content {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  height: 100%;
+  -webkit-box-sizing: content-box !important;
+  box-sizing: content-box !important;
 }
 
 body .scroll-content, ion-content .scroll-content {
   padding: 0 !important;
+  contain: none;
 }
 
 cadastro-partidas {
@@ -25697,7 +25701,7 @@ cadastro-partidas {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   background-size: 100%;
   width: calc(100% - 300px);
   height: 100%;
@@ -25892,13 +25896,19 @@ cadastro-partidas .novo-adversario .adversario-info-input {
   background-color: #f8f8f8;
 }
 
-cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-moz-placeholder,
-cadastro-partidas .novo-adversario .adversario-info-input:-ms-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input:-moz-placeholder {
+cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input::-moz-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input:-ms-input-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input:-moz-placeholder {
   color: #9d9d9d;
 }
 
-cadastro-partidas .novo-adversario .adversario-info-input::placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input::-moz-placeholder,
-cadastro-partidas .novo-adversario .adversario-info-input:-ms-input-placeholder, cadastro-partidas .novo-adversario .adversario-info-input:-moz-placeholder {
+cadastro-partidas .novo-adversario .adversario-info-input::placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input::-webkit-input-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input::-moz-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input:-ms-input-placeholder,
+cadastro-partidas .novo-adversario .adversario-info-input:-moz-placeholder {
   color: #9d9d9d;
 }
 
@@ -25936,13 +25946,19 @@ cadastro-partidas .partida-info .partida-info-form {
   white-space: nowrap;
 }
 
-cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder, cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder, cadastro-partidas .partida-info .partida-info-input::-moz-placeholder,
-cadastro-partidas .partida-info .partida-info-input:-ms-input-placeholder, cadastro-partidas .partida-info .partida-info-input:-moz-placeholder {
+cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder,
+cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder,
+cadastro-partidas .partida-info .partida-info-input::-moz-placeholder,
+cadastro-partidas .partida-info .partida-info-input:-ms-input-placeholder,
+cadastro-partidas .partida-info .partida-info-input:-moz-placeholder {
   color: #9d9d9d;
 }
 
-cadastro-partidas .partida-info .partida-info-input::placeholder, cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder, cadastro-partidas .partida-info .partida-info-input::-moz-placeholder,
-cadastro-partidas .partida-info .partida-info-input:-ms-input-placeholder, cadastro-partidas .partida-info .partida-info-input:-moz-placeholder {
+cadastro-partidas .partida-info .partida-info-input::placeholder,
+cadastro-partidas .partida-info .partida-info-input::-webkit-input-placeholder,
+cadastro-partidas .partida-info .partida-info-input::-moz-placeholder,
+cadastro-partidas .partida-info .partida-info-input:-ms-input-placeholder,
+cadastro-partidas .partida-info .partida-info-input:-moz-placeholder {
   color: #9d9d9d;
 }
 
@@ -25969,7 +25985,6 @@ cadastro-partidas .position-botao .botao-avancar {
   -ms-flex-pack: center;
   justify-content: center;
   width: 181px;
-  height: 42px;
   border-radius: 20px;
   background-color: #b2d16f;
 }
@@ -26126,7 +26141,7 @@ login-screen ::-webkit-input-placeholder {
   font-weight: bold;
 }
 
-menu-lateral .coluna-esquerda {
+menu-lateral {
   position: fixed;
   float: left;
   background: #F8F8F8;
@@ -26137,11 +26152,11 @@ menu-lateral .coluna-esquerda {
   padding-top: 100px;
 }
 
-menu-lateral .coluna-esquerda .coluna-esquerda-cima {
+menu-lateral .coluna-esquerda-cima {
   height: 50%;
 }
 
-menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario {
+menu-lateral .coluna-esquerda-cima .info-usuario {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26164,45 +26179,30 @@ menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario {
   top: -18%;
 }
 
-menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #imgLogo {
+menu-lateral .coluna-esquerda-cima .info-usuario #imgLogo {
   width: 45%;
 }
 
-menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblAdministracao {
+menu-lateral .coluna-esquerda-cima .info-usuario #lblAdministracao {
   font-weight: bold;
   color: #4577b1;
   margin: 10px;
   font-size: 17px;
 }
 
-menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblNome {
+menu-lateral .coluna-esquerda-cima .info-usuario #lblNome {
   color: #333;
   font-size: 17px;
 }
 
-menu-lateral .coluna-esquerda .coluna-esquerda-cima .info-usuario #lblEmail {
+menu-lateral .coluna-esquerda-cima .info-usuario #lblEmail {
   color: #c4c4c4;
   font-size: 11px;
 }
 
 placar-online {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #F4F4F4;
-  background-size: 100%;
-  width: calc(100% - 300px);
-  height: 100%;
-  margin-left: 300px;
+  background-color: #f4f4f4;
+  width: 90%;
 }
 
 placar-online p {
@@ -26235,6 +26235,55 @@ placar-online .flex {
   display: flex;
 }
 
+placar-online .set-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+placar-online .set-item.inactive .sets-ativo-pai button {
+  display: none;
+}
+
+placar-online .set-item.inactive .sets-ativo-pai .pontos,
+placar-online .set-item.inactive .sets-ativo-pai .finalizado-msg {
+  color: #d7d7d7;
+}
+
+placar-online .set-item.inactive .sets-ativo-pai .finalizado-msg {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+
+placar-online .set-item .position-time2-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+placar-online .finalizado-msg {
+  display: none;
+}
+
 placar-online .flex-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -26257,8 +26306,8 @@ placar-online .central {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   background-color: white;
   -webkit-box-shadow: 0px 5px 25px #b2bec3;
   box-shadow: 0px 5px 25px #b2bec3;
@@ -26327,11 +26376,11 @@ placar-online .acoes-partida {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 800px;
-  height: 91px;
   background-color: #dee9f5;
+  width: 100%;
   margin-bottom: 20px;
   margin-left: -20px;
+  padding: 10px;
 }
 
 placar-online .acoes-partida .position-titulo-acoes {
@@ -26355,7 +26404,14 @@ placar-online .acoes-partida .position-titulo-acoes .titulo-acoes {
   color: #245fab;
 }
 
-placar-online .acoes-partida .position-botao {
+placar-online .acoes-partida .position-botoes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+placar-online .acoes-partida .position-botoes .botao-esquerda {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26363,29 +26419,42 @@ placar-online .acoes-partida .position-botao {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  width: 50%;
 }
 
-placar-online .acoes-partida .position-botao .botao-acao-fonte {
+placar-online .acoes-partida .position-botoes .botao-direita {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+placar-online .acoes-partida .position-botoes .botao-acao-fonte {
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
 }
 
-placar-online .acoes-partida .position-botao .botao-avancar {
-  width: 135px;
+placar-online .acoes-partida .position-botoes .botao-adicionar {
+  width: 150px;
   height: 30px;
   border-radius: 20px;
   background-color: #245fab;
 }
 
-placar-online .acoes-partida .position-botao .botao-atualizar {
+placar-online .acoes-partida .position-botoes .botao-atualizar {
   width: 166px;
   height: 30px;
   border-radius: 20px;
   background-color: #21dd29;
 }
 
-placar-online .acoes-partida .position-botao .botao-finalizar {
+placar-online .acoes-partida .position-botoes .botao-finalizar {
   width: 166.2px;
   height: 30px;
   border-radius: 20px;
@@ -26616,6 +26685,10 @@ tela-home .sessoes {
   float: right;
   height: 100%;
   font-weight: bold;
+}
+
+tela-home .sessoes .box {
+  cursor: pointer;
 }
 
 tela-home .sessoes #lblPlacarOnline, tela-home .sessoes #lblMarketplace, tela-home .sessoes #lblLojaDaTorcida, tela-home .sessoes #lblMinhaConta {
