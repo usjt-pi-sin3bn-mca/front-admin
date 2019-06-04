@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { NavController } from 'ionic-angular';
+import { ProviderPartidasProvider } from '../../providers/provider-partidas/provider-partidas';
 
 /**
  * Generated class for the CadastroPartidasComponent component.
@@ -39,8 +40,23 @@ export class CadastroPartidasComponent {
   partidaIniciada : boolean;
   partidaFinalizada : boolean;
 
-  constructor(public http: HttpClient, public navCtrl: NavController) {
-    this.connectApi();
+  bodyRequest: object = {
+    "campeonato": {"id": 1},
+    "timeB" : this.timeB,
+    "visitante" : "false",
+    "descricao" : "Partida teste",
+    "local" : this.local,
+    "data" : this.data,
+    "desafioA" : 0,
+    "desafioB" : 0,
+    "urlLogoAdv" : this.urlLogoAdv,
+    "ganhadorPartida" : "São Judas",
+    "partidaIniciada" : "true",
+    "partidaFinalizada" : "false",
+  }
+
+  constructor(public http: HttpClient, public navCtrl: NavController, public _providerPartidas: ProviderPartidasProvider) {
+    this._providerPartidas.getAllPartidas();
   }
 
   connectApi() {
@@ -67,8 +83,10 @@ export class CadastroPartidasComponent {
   }
 
   sendRequest() {
-    console.log("Request feito");
+    //this._providerPartidas.criarPartida(this.bodyRequest);
+    console.log("Request feito", this.bodyRequest);
     this.partidaEmAndamento = true;
   }
 
 }
+

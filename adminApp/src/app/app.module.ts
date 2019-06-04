@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { PlacarPage } from '../pages/placar/placar';
 import { TestPage } from '../pages/test/test';
 import { CadastrarPartidaPage } from '../pages/cadastrar-partida/cadastrar-partida';
@@ -41,7 +42,8 @@ import { ProviderPartidasProvider } from '../providers/provider-partidas/provide
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

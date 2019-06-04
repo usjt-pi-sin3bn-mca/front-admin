@@ -78,10 +78,10 @@
   
       <div class="position-botao-sets">
         <p class="finalizado-msg">Set Finalizado</p>
-        <button class="botao-atualizar-set" (click)="adicionarSet(i); finalizarSet(i)">
+        <button class="botao-atualizar-set" (click)="adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">
           <p class="botao-fonte">Avançar set</p>
         </button>
-        <button class="botao-finalizar-set" (click)="finalizarSet(i)">
+        <button class="botao-finalizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">
           <p class="botao-fonte">Finalizar set</p>
         </button>
       </div>

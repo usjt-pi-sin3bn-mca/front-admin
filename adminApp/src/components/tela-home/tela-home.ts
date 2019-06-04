@@ -29,4 +29,8 @@ export class TelaHomeComponent {
   openCadastroPartidas($param) {
     this.navCtrl.setRoot(CadastrarPartidaPage);
   }
+
+  indisponivel() {
+    alert("Funcionalidade indisponível.");
+  }
 }
