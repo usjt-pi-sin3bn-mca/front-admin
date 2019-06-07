@@ -23,6 +23,7 @@ import { PlacarOnlineComponent } from '../components/placar-online/placar-online
 import { LoginPage } from '../pages/login/login';
 import { ProviderPartidasProvider } from '../providers/provider-partidas/provider-partidas';
 import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
+import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
     LoginScreenComponent,
     CadastroPartidasComponent,
     MenuLateralComponent,
-    PlacarOnlineComponent
+    PlacarOnlineComponent,
+    PlacarOnlinePage
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
     PlacarPage,
     ListaPartidasPage,
     CadastrarPartidaPage,
+    PlacarOnlinePage,
     TestPage,
     TelaHomeComponent,
     LoginPage,

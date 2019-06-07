@@ -1,6 +1,8 @@
 placar-online {
   background-color: #f4f4f4;
-  width: 90%;
+  width: calc(100% - 300px);
+  margin-left: 300px !important;
+  position: fixed;
 
   p {
     margin-block-start: 0;
@@ -18,6 +20,16 @@ placar-online {
 
   button {
     font-family: sans-serif;
+  }
+
+  .area {
+    display: flex;
+    width: 300px;
+    button {
+      background-color: #0f558b;
+      color: #fff;
+      font-size: 20px;
+    }
   }
 
   .flex {

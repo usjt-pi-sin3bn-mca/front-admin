@@ -23,45 +23,16 @@ export class PlacarOnlineComponent {
   dataObj: any;
   data: any;
   sets: any;
+  conteudoAtivo: boolean = false;
 
   constructor(public navCtrl: NavController, public http: HttpClient, public _partidasProvider: ProviderPartidasProvider) {
-    this.connectApi();
     
-    //console.log("aesdsfsfsf:", this.idPartidaAtual);
+    this.getSets();
   }
 
-  connectApi() {
-    let url = this.baseApiPath + 'partidas/';
 
-    if (this.dataObj) {
-      return Promise.resolve(this.dataObj);
-    }
-
-    return new Promise(resolve => {
-      this.http
-        .get(url)
-        .map(res => res)
-        .subscribe(dataObj => {
-          this.data = dataObj;
-          resolve(this.data)
-          // console.log("passou no placar", this.data);
-
-          var idPartidaAtual;
-          idPartidaAtual = this.data[0].id;
-          this.idPartidaAtual = this.data[0].id;
-          console.log("set sok:", this.sets);
-          console.log("lala", idPartidaAtual);
-          this.getSets(idPartidaAtual);
-        },
-        (error) => {
-          console.log("Erro no provider de getSets");
-        });
-    });
-  }
-  
-
-  getSets(id) {
-    let url = this.baseApiPath + 'setPartida/?partidaId=' + id;
+  getSets() {
+    let url = this.baseApiPath + 'setPartida/?partidaId=' + this.idPartidaAtual;
 
     if (this.data) {
       return Promise.resolve(this.data);
@@ -82,9 +53,10 @@ export class PlacarOnlineComponent {
   }
 
   atualizarPlacar() {
+    this.getSets();
   }
 
-  adicionarSet(id, pontoSJ, pontoAdv) {
+  adicionarSet() {
     let setZerado: object = { 
       "pontoA":0,
       "pontoB":0,
@@ -98,10 +70,26 @@ export class PlacarOnlineComponent {
      };
     // console.log("zerado", setZerado);
     this._partidasProvider.criarSet(setZerado);
+    this.getSets();
 
   }
 
+  verificarId(id) {
+    if (id > 0) {
+      this.conteudoAtivo = true;
+    }
+    else {
+      alert("Número inválido");
+    }
+  }
+
   finalizarSet(id, pontoSJ, pontoAdv) {
+    if (this.sets[id].pontoA > this.sets[id].pontoB) {
+      this.sets[id].ganhador = "Sao Judas";
+    }
+    else {
+      this.sets[id].ganhador = "Adversário";
+    }
     var element = document.getElementById("set-numero-" + id);
     element.classList.add("inactive");
     this.sets[id].setFinalizado = "true";
@@ -112,21 +100,32 @@ export class PlacarOnlineComponent {
     this.navCtrl.setRoot(HomePage);
   }
 
+  sendRequest(id) {
+    let body = this.sets;
+    body = body[id];
+    console.log("body", body);
+    this._partidasProvider.atualizarSet(body.id, body);
+  }
+
   aumentarPontoSJ($param) {
-    this.sets[$param].pontoSetAtualSJ = this.sets[$param].pontoSetAtualSJ+1;
-    console.log(this.pontoSetAtualSJ);
+    this.sets[$param].pontoA = this.sets[$param].pontoA+1;
+    console.log(this.sets[$param].pontoA);
+    this.sendRequest($param);
   }
 
   aumentarPontoAdversario($param) {
-    this.sets[$param].pontoSetAtualAdversario = this.sets[$param].pontoSetAtualAdversario+1;
+    this.sets[$param].pontoB = this.sets[$param].pontoB+1;
+    this.sendRequest($param);
   }
 
   diminuirPontoSJ($param) {
-    this.sets[$param].pontoSetAtualSJ = this.sets[$param].pontoSetAtualSJ-1;
+    this.sets[$param].pontoA = this.sets[$param].pontoA-1;
+    this.sendRequest($param);
   }
 
   diminuirPontoAdversario($param) {
-    this.sets[$param].pontoSetAtualAdversario = this.sets[$param].pontoSetAtualAdversario-1;
+    this.sets[$param].pontoB = this.sets[$param].pontoB-1;
+    this.sendRequest($param);
   }
 
 }

@@ -21,5 +21,6 @@ export class CadastrarPartidaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastrarPartidaPage');
   }
+  
 
 }

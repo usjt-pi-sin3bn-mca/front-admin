@@ -108,16 +108,16 @@ export class ProviderPartidasProvider {
 
   atualizarSet(id, body) {
     return new Promise((resolve, reject) => {
-      this.http.post(this.baseApiPath + 'set/' + id, body)
+      this.http.put(this.baseApiPath + 'set/' + id, body)
       .toPromise()
       .then((response) =>
       {
-        console.log('API SET KKKK Response : ', response.json());
+        console.log('API SET ATUALIZOU Response : ', response.json());
         resolve(response.json());
       })
       .catch((error) =>
       {
-        console.error('API SET KKKKK Error : ', error.status);
+        console.error('API SET ATUALIZOU Error : ', error.status);
         console.error('API SET Error : ', JSON.stringify(error));
         reject(error.json());
       });

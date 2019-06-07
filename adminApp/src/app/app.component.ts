@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { CadastrarPartidaPage } from '../pages/cadastrar-partida/cadastrar-partida';
 import { LoginPage } from '../pages/login/login';
 import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
+import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +26,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Cadastrar Partida', component: CadastrarPartidaPage },
-      { title: 'Lista de partidas', component: ListaPartidasPage }
+      { title: 'Lista de partidas', component: ListaPartidasPage },
+      { title: 'Administrar placar', component: PlacarOnlinePage }
     ];
 
   }
