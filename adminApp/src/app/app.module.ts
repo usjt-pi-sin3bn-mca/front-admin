@@ -22,6 +22,7 @@ import { MenuLateralComponent } from '../components/menu-lateral/menu-lateral';
 import { PlacarOnlineComponent } from '../components/placar-online/placar-online';
 import { LoginPage } from '../pages/login/login';
 import { ProviderPartidasProvider } from '../providers/provider-partidas/provider-partidas';
+import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProviderPartidasProvider } from '../providers/provider-partidas/provide
     ListPage,
     CadastroPage,
     PlacarPage,
+    ListaPartidasPage,
     CadastrarPartidaPage,
     TestPage,
     TelaHomeComponent,
@@ -52,6 +54,7 @@ import { ProviderPartidasProvider } from '../providers/provider-partidas/provide
     ListPage,
     CadastroPage,
     PlacarPage,
+    ListaPartidasPage,
     CadastrarPartidaPage,
     TestPage,
     TelaHomeComponent,

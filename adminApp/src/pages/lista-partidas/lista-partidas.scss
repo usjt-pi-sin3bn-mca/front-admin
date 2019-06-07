@@ -1,0 +1,17 @@
+page-lista-partidas {
+    ion-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-item {
+        padding: 30px;
+        flex-basis: calc(100% / 3 - 25px);
+        text-align: center;
+
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            width: 100%;
+        }
+    }
+}

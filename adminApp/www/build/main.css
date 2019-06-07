@@ -26762,3 +26762,27 @@ page-home {
   width: 100%;
   text-align: center;
 }
+
+page-lista-partidas ion-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+page-lista-partidas .card-item {
+  padding: 30px;
+  -webkit-flex-basis: calc(100% / 3 - 25px);
+  -ms-flex-preferred-size: calc(100% / 3 - 25px);
+  flex-basis: calc(100% / 3 - 25px);
+  text-align: center;
+}
+
+page-lista-partidas .card-item h2 {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+}

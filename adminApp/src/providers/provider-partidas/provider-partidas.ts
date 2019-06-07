@@ -14,13 +14,13 @@ export class ProviderPartidasProvider {
   private baseApiPath = 'http://jazz.lucasduarte.club/api/';
   public apiResult: any;
   listaPartidas: any;
+  
   partidaAtual: any;
   idPartidaAtual: any;
   data: any;
   totalSets: any;
   
   constructor(public http: Http) {
-    console.log('Hello ProviderPartidasProvider');
   }
 
   getAllPartidas() {
@@ -33,12 +33,12 @@ export class ProviderPartidasProvider {
     return new Promise(resolve => {
       this.http
         .get(url)
-        .map(res => res)
+        .map(res => res.json())
         .subscribe(data => {
           this.data = data;
           resolve(this.data);
-          console.log("passouUUU", this.data);
-          this.partidaAtual = data[0];
+          //console.log("passouUUU", this.data);
+          // this.partidaAtual = data[0];
          // this.idPartidaAtual = this.partidaAtual.id;
         },
         (error) => {
