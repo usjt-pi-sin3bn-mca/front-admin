@@ -14,13 +14,13 @@ export class ProviderPartidasProvider {
   private baseApiPath = 'http://jazz.lucasduarte.club/api/';
   public apiResult: any;
   listaPartidas: any;
+  
   partidaAtual: any;
   idPartidaAtual: any;
   data: any;
   totalSets: any;
   
   constructor(public http: Http) {
-    console.log('Hello ProviderPartidasProvider');
   }
 
   getAllPartidas() {
@@ -33,12 +33,12 @@ export class ProviderPartidasProvider {
     return new Promise(resolve => {
       this.http
         .get(url)
-        .map(res => res)
+        .map(res => res.json())
         .subscribe(data => {
           this.data = data;
           resolve(this.data);
-          console.log("passouUUU", this.data);
-          this.partidaAtual = data[0];
+          //console.log("passouUUU", this.data);
+          // this.partidaAtual = data[0];
          // this.idPartidaAtual = this.partidaAtual.id;
         },
         (error) => {
@@ -108,16 +108,16 @@ export class ProviderPartidasProvider {
 
   atualizarSet(id, body) {
     return new Promise((resolve, reject) => {
-      this.http.post(this.baseApiPath + 'set/' + id, body)
+      this.http.put(this.baseApiPath + 'set/' + id, body)
       .toPromise()
       .then((response) =>
       {
-        console.log('API SET KKKK Response : ', response.json());
+        console.log('API SET ATUALIZOU Response : ', response.json());
         resolve(response.json());
       })
       .catch((error) =>
       {
-        console.error('API SET KKKKK Error : ', error.status);
+        console.error('API SET ATUALIZOU Error : ', error.status);
         console.error('API SET Error : ', JSON.stringify(error));
         reject(error.json());
       });

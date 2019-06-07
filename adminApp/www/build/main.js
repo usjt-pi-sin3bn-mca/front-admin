@@ -1,12 +1,119 @@
-webpackJsonp([7],{
+webpackJsonp([8],{
 
-/***/ 103:
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPartidasPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_provider_partidas_provider_partidas__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cadastrar_partida_cadastrar_partida__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+/**
+ * Generated class for the ListaPartidasPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ListaPartidasPage = (function () {
+    function ListaPartidasPage(navCtrl, navParams, _partidas) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this._partidas = _partidas;
+        this.showAll();
+    }
+    ListaPartidasPage.prototype.ionViewDidLoad = function () {
+    };
+    ListaPartidasPage.prototype.showAll = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this._partidas.getAllPartidas()];
+                    case 1:
+                        _a.lista = _b.sent();
+                        this.lista = this.lista.reverse();
+                        console.log("lista", this.lista);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ListaPartidasPage.prototype.openCadastroPartidas = function ($param) {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */]);
+    };
+    ListaPartidasPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-lista-partidas',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\lista-partidas\lista-partidas.html"*/'<!--\n\n  Generated template for the ListaPartidasPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Lista de Partidas</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <menu-lateral></menu-lateral>\n\n  <ion-list>\n\n    <div class="actions">\n\n      <button (click)="openCadastroPartidas()">Adicionar nova partida</button>\n\n    </div>\n\n    <ion-card *ngFor="let item of lista" class="card-item">\n\n      <p>ID da partida: {{item.id}}</p>\n\n      <h2>São Judas</h2> vs <h2>{{item.timeB}}</h2>\n\n      <p>{{item.data}}</p>\n\n      <div class="status finalizada" *ngIf="item.partidaFinalizada">Partida finalizada</div>\n\n      <div class="status iniciada" *ngIf="item.partidaIniciada">Partida iniciada</div>\n\n      <div class="status aberto" *ngIf="!item.partidaIniciada">Partida em aberto</div>\n\n    </ion-card>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\lista-partidas\lista-partidas.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_2__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]) === "function" && _c || Object])
+    ], ListaPartidasPage);
+    return ListaPartidasPage;
+    var _a, _b, _c;
+}());
+
+//# sourceMappingURL=lista-partidas.js.map
+
+/***/ }),
+
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45,7 +152,7 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 116:
+/***/ 118:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -58,41 +165,49 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 116;
+webpackEmptyAsyncContext.id = 118;
 
 /***/ }),
 
-/***/ 157:
+/***/ 159:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/cadastrar-partida/cadastrar-partida.module": [
-		291,
-		6
+		292,
+		18
 	],
 	"../pages/cadastro-convenio/cadastro-convenio.module": [
-		292,
-		1
+		293,
+		12
 	],
 	"../pages/cadastro/cadastro.module": [
-		293,
-		5
+		294,
+		17
+	],
+	"../pages/lista-partidas/lista-partidas.module": [
+		295,
+		16
 	],
 	"../pages/login/login.module": [
-		294,
-		4
+		296,
+		15
 	],
 	"../pages/marketplace/marketplace.module": [
-		295,
-		0
+		297,
+		11
+	],
+	"../pages/placar-online/placar-online.module": [
+		302,
+		10
 	],
 	"../pages/placar/placar.module": [
-		296,
-		3
+		298,
+		14
 	],
 	"../pages/test/test.module": [
-		297,
-		2
+		299,
+		13
 	]
 };
 function webpackAsyncContext(req) {
@@ -106,147 +221,18 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 157;
+webpackAsyncContext.id = 159;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 202:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProviderPartidasProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/*
-  Generated class for the ProviderPartidasProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var ProviderPartidasProvider = (function () {
-    function ProviderPartidasProvider(http) {
-        this.http = http;
-        this.baseApiPath = 'http://jazz.lucasduarte.club/api/';
-        console.log('Hello ProviderPartidasProvider');
-    }
-    ProviderPartidasProvider.prototype.getAllPartidas = function () {
-        var _this = this;
-        var url = this.baseApiPath + 'partidas/';
-        if (this.data) {
-            return Promise.resolve(this.data);
-        }
-        return new Promise(function (resolve) {
-            _this.http
-                .get(url)
-                .map(function (res) { return res; })
-                .subscribe(function (data) {
-                _this.data = data;
-                resolve(_this.data);
-                console.log("passouUUU", _this.data);
-                _this.partidaAtual = data[0];
-                // this.idPartidaAtual = this.partidaAtual.id;
-            }, function (error) {
-                console.log("Erro no provider de partidas");
-            });
-        });
-    };
-    ProviderPartidasProvider.prototype.criarPartida = function (body) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.http.post(_this.baseApiPath + 'partidas/', body)
-                .toPromise()
-                .then(function (response) {
-                console.log('API Response : ', response.json());
-                resolve(response.json());
-            })
-                .catch(function (error) {
-                console.error('API Error : ', error.status);
-                console.error('API Error : ', JSON.stringify(error));
-                reject(error.json());
-            });
-        });
-    };
-    ProviderPartidasProvider.prototype.criarSet = function (body) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.http.post(_this.baseApiPath + 'set/', body)
-                .toPromise()
-                .then(function (response) {
-                console.log('API SET Response : ', response.json());
-                resolve(response.json());
-            })
-                .catch(function (error) {
-                console.error('API SET Error : ', error.status);
-                console.error('API SET Error : ', JSON.stringify(error));
-                reject(error.json());
-            });
-        });
-    };
-    ProviderPartidasProvider.prototype.getSets = function (id) {
-        var _this = this;
-        var url = this.baseApiPath + 'setPartida/?partidaId=' + id;
-        if (this.data) {
-            return Promise.resolve(this.data);
-        }
-        return new Promise(function (resolve) {
-            _this.http
-                .get(url)
-                .map(function (res) { return res; })
-                .subscribe(function (data) {
-                _this.totalSets = data;
-                console.log("Sets ae", _this.totalSets);
-            }, function (error) {
-                console.log("Erro no provider de sets");
-            });
-        });
-    };
-    ProviderPartidasProvider.prototype.atualizarSet = function (id, body) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.http.post(_this.baseApiPath + 'set/' + id, body)
-                .toPromise()
-                .then(function (response) {
-                console.log('API SET KKKK Response : ', response.json());
-                resolve(response.json());
-            })
-                .catch(function (error) {
-                console.error('API SET KKKKK Error : ', error.status);
-                console.error('API SET Error : ', JSON.stringify(error));
-                reject(error.json());
-            });
-        });
-    };
-    ProviderPartidasProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
-    ], ProviderPartidasProvider);
-    return ProviderPartidasProvider;
-    var _a;
-}());
-
-//# sourceMappingURL=provider-partidas.js.map
-
-/***/ }),
-
-/***/ 203:
+/***/ 204:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -285,13 +271,13 @@ var CadastroPage = (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacarPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -330,13 +316,13 @@ var PlacarPage = (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -375,13 +361,13 @@ var TestPage = (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(229);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -389,38 +375,42 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 228:
+/***/ 229:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_test_test__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_tela_home_tela_home__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_login_screen_login_screen__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_cadastro_partidas_cadastro_partidas__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_menu_lateral_menu_lateral__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_login_login__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_provider_partidas_provider_partidas__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_test_test__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_tela_home_tela_home__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_login_screen_login_screen__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_cadastro_partidas_cadastro_partidas__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_menu_lateral_menu_lateral__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_login_login__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_provider_partidas_provider_partidas__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_lista_partidas_lista_partidas__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__ = __webpack_require__(303);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -453,6 +443,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__["a" /* CadastroPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__["a" /* PlacarPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_lista_partidas_lista_partidas__["a" /* ListaPartidasPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_test_test__["a" /* TestPage */],
                 __WEBPACK_IMPORTED_MODULE_14__components_tela_home_tela_home__["a" /* TelaHomeComponent */],
@@ -460,7 +451,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_15__components_login_screen_login_screen__["a" /* LoginScreenComponent */],
                 __WEBPACK_IMPORTED_MODULE_16__components_cadastro_partidas_cadastro_partidas__["a" /* CadastroPartidasComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__components_menu_lateral_menu_lateral__["a" /* MenuLateralComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__["a" /* PlacarOnlineComponent */]
+                __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__["a" /* PlacarOnlineComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__["a" /* PlacarOnlinePage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -469,10 +461,12 @@ var AppModule = (function () {
                         { loadChildren: '../pages/cadastrar-partida/cadastrar-partida.module#CadastrarPartidaPageModule', name: 'CadastrarPartidaPage', segment: 'cadastrar-partida', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cadastro-convenio/cadastro-convenio.module#CadastroConvenioPageModule', name: 'CadastroConvenioPage', segment: 'cadastro-convenio', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/lista-partidas/lista-partidas.module#ListaPartidasPageModule', name: 'ListaPartidasPage', segment: 'lista-partidas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/marketplace/marketplace.module#MarketplacePageModule', name: 'MarketplacePage', segment: 'marketplace', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/placar/placar.module#PlacarPageModule', name: 'PlacarPage', segment: 'placar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/placar-online/placar-online.module#PlacarOnlinePageModule', name: 'PlacarOnlinePage', segment: 'placar-online', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_9__angular_common_http__["b" /* HttpClientModule */],
@@ -485,7 +479,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__["a" /* CadastroPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__["a" /* PlacarPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_lista_partidas_lista_partidas__["a" /* ListaPartidasPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__["a" /* PlacarOnlinePage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_test_test__["a" /* TestPage */],
                 __WEBPACK_IMPORTED_MODULE_14__components_tela_home_tela_home__["a" /* TelaHomeComponent */],
                 __WEBPACK_IMPORTED_MODULE_19__pages_login_login__["a" /* LoginPage */],
@@ -509,18 +505,20 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 270:
+/***/ 271:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_lista_partidas_lista_partidas__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_placar_online_placar_online__ = __webpack_require__(303);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -530,6 +528,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -547,7 +547,9 @@ var MyApp = (function () {
         // used for an example of ngFor and navigation
         this.pages = [
             { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Cadastrar Partida', component: __WEBPACK_IMPORTED_MODULE_5__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */] }
+            { title: 'Cadastrar Partida', component: __WEBPACK_IMPORTED_MODULE_5__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */] },
+            { title: 'Lista de partidas', component: __WEBPACK_IMPORTED_MODULE_7__pages_lista_partidas_lista_partidas__["a" /* ListaPartidasPage */] },
+            { title: 'Administrar placar', component: __WEBPACK_IMPORTED_MODULE_8__pages_placar_online_placar_online__["a" /* PlacarOnlinePage */] }
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -566,28 +568,29 @@ var MyApp = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ 279:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -642,14 +645,14 @@ var ListPage = (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TelaHomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -685,7 +688,7 @@ var TelaHomeComponent = (function () {
     };
     TelaHomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'tela-home',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/'  <div class="sessoes">\n\n    <div class="cima">\n\n      <div id="boxPlacarOnline" class="box" (click)="openCadastroPartidas()">\n\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n\n      </div>\n\n            \n\n      <div id="boxMarketplace" class="box" (click)="indisponivel()">\n\n        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">\n\n        <label id="lblMarketplace" type="text">Marketplace</label>\n\n      </div>\n\n    </div>\n\n\n\n    <div class="baixo">\n\n      <div id="boxLojaDaTorcida" class="box" (click)="indisponivel()">\n\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n\n      </div>\n\n            \n\n      <div id="boxMinhaConta" class="box" (click)="indisponivel()">\n\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n\n      </div>\n\n    </div>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/
+            selector: 'tela-home',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/'  <div class="sessoes">\n\n    <div class="cima">\n\n      <div id="boxPlacarOnline" class="box" (click)="openCadastroPartidas()">\n\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n\n        <label id="lblPlacarOnline" type="text">Partidas</label>\n\n      </div>\n\n            \n\n      <div id="boxMarketplace" class="box" (click)="indisponivel()">\n\n        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">\n\n        <label id="lblMarketplace" type="text">Marketplace</label>\n\n      </div>\n\n    </div>\n\n\n\n    <div class="baixo">\n\n      <div id="boxLojaDaTorcida" class="box" (click)="indisponivel()">\n\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n\n      </div>\n\n            \n\n      <div id="boxMinhaConta" class="box" (click)="indisponivel()">\n\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n\n      </div>\n\n    </div>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], TelaHomeComponent);
@@ -696,14 +699,14 @@ var TelaHomeComponent = (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginScreenComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -744,17 +747,17 @@ var LoginScreenComponent = (function () {
 
 /***/ }),
 
-/***/ 287:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPartidasComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_provider_partidas_provider_partidas__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_provider_partidas_provider_partidas__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -826,19 +829,18 @@ var CadastroPartidasComponent = (function () {
     };
     CadastroPartidasComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'cadastro-partidas',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/'<div class="central" *ngIf="!partidaEmAndamento">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="adicionar-partida">\n\n      <p class="flex">Adicionar partida</p>\n\n  </div>\n\n\n\n  <div class="times">\n\n    <p class="flex">TIMES</p>\n\n  </div>\n\n\n\n  <div class="novo-adversario">\n\n    <img src="../../assets/imgs/logo-usjt.png" class="usjt-icon">\n\n\n\n    <div class="adversario-info">\n\n      <p class="adversario-titulo">Adversário</p>\n\n\n\n    <form class="flex flex-column">\n\n        <input type="text" [(ngModel)]="bodyRequest.timeB" name="timeB" placeholder="Nome do time" class="adversario-info-input">\n\n        {{timeB}}\n\n        <input type="text" [(ngModel)]="bodyRequest.urlLogoAdv" name="urlLogoAdv" placeholder="URL do logo" class="adversario-info-input">\n\n    </form>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="partida-info">\n\n    <p class="detalhes-partida">DETALHES DA PARTIDA</p>\n\n\n\n    <form class="partida-info-form">\n\n      <div>\n\n        <input type="text" [(ngModel)]="bodyRequest.data" name="data" placeholder="Data" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.hora" name="hora" placeholder="Horário" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.local" name="local" placeholder="Local" class="partida-info-input">\n\n      </div>\n\n      <div>\n\n        <!-- <input type="text" [(ngModel)]="bodyRequest.campeonatoNome" name="campeonatoNome" placeholder="Campeonato" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.visitante" name="visitante" placeholder="São Judas como visitante?" class="partida-info-input"> -->\n\n      </div>\n\n    </form>\n\n\n\n    <div class="position-botao">\n\n      <button class="botao-avancar" (click)="sendRequest()">\n\n        <p class="avancar">Avançar</p>\n\n      </button>\n\n    </div>\n\n  </div>\n\n</div>\n\n\n\n<placar-online *ngIf="partidaEmAndamento"></placar-online>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/
+            selector: 'cadastro-partidas',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/'<div class="central" *ngIf="!partidaEmAndamento">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="adicionar-partida">\n\n      <p class="flex">Adicionar partida</p>\n\n  </div>\n\n\n\n  <div class="times">\n\n    <p class="flex">TIMES</p>\n\n  </div>\n\n\n\n  <div class="novo-adversario">\n\n    <img src="../../assets/imgs/logo-usjt.png" class="usjt-icon">\n\n\n\n    <div class="adversario-info">\n\n      <p class="adversario-titulo">Adversário</p>\n\n\n\n    <form class="flex flex-column">\n\n        <input type="text" [(ngModel)]="bodyRequest.timeB" name="timeB" placeholder="Nome do time" class="adversario-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.urlLogoAdv" name="urlLogoAdv" placeholder="URL do logo" class="adversario-info-input">\n\n    </form>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="partida-info">\n\n    <p class="detalhes-partida">DETALHES DA PARTIDA</p>\n\n\n\n    <form class="partida-info-form">\n\n      <div>\n\n        <input type="text" [(ngModel)]="bodyRequest.data" name="data" placeholder="Data" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.hora" name="hora" placeholder="Horário" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.local" name="local" placeholder="Local" class="partida-info-input">\n\n      </div>\n\n      <div>\n\n        <!-- <input type="text" [(ngModel)]="bodyRequest.campeonatoNome" name="campeonatoNome" placeholder="Campeonato" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.visitante" name="visitante" placeholder="São Judas como visitante?" class="partida-info-input"> -->\n\n      </div>\n\n    </form>\n\n\n\n    <div class="position-botao">\n\n      <button class="botao-avancar" (click)="sendRequest()">\n\n        <p class="avancar">Avançar</p>\n\n      </button>\n\n    </div>\n\n  </div>\n\n</div>\n\n\n\n<placar-online *ngIf="partidaEmAndamento"></placar-online>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]])
     ], CadastroPartidasComponent);
     return CadastroPartidasComponent;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=cadastro-partidas.js.map
 
 /***/ }),
 
-/***/ 289:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -878,16 +880,16 @@ var MenuLateralComponent = (function () {
 
 /***/ }),
 
-/***/ 290:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacarOnlineComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -916,37 +918,12 @@ var PlacarOnlineComponent = (function () {
         this.pontoSetAtualSJ = 0;
         this.pontoSetAtualAdversario = 0;
         this.baseApiPath = 'http://jazz.lucasduarte.club/api/';
-        this.connectApi();
-        //console.log("aesdsfsfsf:", this.idPartidaAtual);
+        this.conteudoAtivo = false;
+        this.getSets();
     }
-    PlacarOnlineComponent.prototype.connectApi = function () {
+    PlacarOnlineComponent.prototype.getSets = function () {
         var _this = this;
-        var url = this.baseApiPath + 'partidas/';
-        if (this.dataObj) {
-            return Promise.resolve(this.dataObj);
-        }
-        return new Promise(function (resolve) {
-            _this.http
-                .get(url)
-                .map(function (res) { return res; })
-                .subscribe(function (dataObj) {
-                _this.data = dataObj;
-                resolve(_this.data);
-                // console.log("passou no placar", this.data);
-                var idPartidaAtual;
-                idPartidaAtual = _this.data[0].id;
-                _this.idPartidaAtual = _this.data[0].id;
-                console.log("set sok:", _this.sets);
-                console.log("lala", idPartidaAtual);
-                _this.getSets(idPartidaAtual);
-            }, function (error) {
-                console.log("Erro no provider de getSets");
-            });
-        });
-    };
-    PlacarOnlineComponent.prototype.getSets = function (id) {
-        var _this = this;
-        var url = this.baseApiPath + 'setPartida/?partidaId=' + id;
+        var url = this.baseApiPath + 'setPartida/?partidaId=' + this.idPartidaAtual;
         if (this.data) {
             return Promise.resolve(this.data);
         }
@@ -963,8 +940,9 @@ var PlacarOnlineComponent = (function () {
         });
     };
     PlacarOnlineComponent.prototype.atualizarPlacar = function () {
+        this.getSets();
     };
-    PlacarOnlineComponent.prototype.adicionarSet = function (id, pontoSJ, pontoAdv) {
+    PlacarOnlineComponent.prototype.adicionarSet = function () {
         var setZerado = {
             "pontoA": 0,
             "pontoB": 0,
@@ -978,8 +956,23 @@ var PlacarOnlineComponent = (function () {
         };
         // console.log("zerado", setZerado);
         this._partidasProvider.criarSet(setZerado);
+        this.getSets();
+    };
+    PlacarOnlineComponent.prototype.verificarId = function (id) {
+        if (id > 0) {
+            this.conteudoAtivo = true;
+        }
+        else {
+            alert("Número inválido");
+        }
     };
     PlacarOnlineComponent.prototype.finalizarSet = function (id, pontoSJ, pontoAdv) {
+        if (this.sets[id].pontoA > this.sets[id].pontoB) {
+            this.sets[id].ganhador = "Sao Judas";
+        }
+        else {
+            this.sets[id].ganhador = "Adversário";
+        }
         var element = document.getElementById("set-numero-" + id);
         element.classList.add("inactive");
         this.sets[id].setFinalizado = "true";
@@ -988,22 +981,32 @@ var PlacarOnlineComponent = (function () {
         alert("A Partida foi finalizada com sucesso.");
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pages_home_home__["a" /* HomePage */]);
     };
+    PlacarOnlineComponent.prototype.sendRequest = function (id) {
+        var body = this.sets;
+        body = body[id];
+        console.log("body", body);
+        this._partidasProvider.atualizarSet(body.id, body);
+    };
     PlacarOnlineComponent.prototype.aumentarPontoSJ = function ($param) {
-        this.sets[$param].pontoSetAtualSJ = this.sets[$param].pontoSetAtualSJ + 1;
-        console.log(this.pontoSetAtualSJ);
+        this.sets[$param].pontoA = this.sets[$param].pontoA + 1;
+        console.log(this.sets[$param].pontoA);
+        this.sendRequest($param);
     };
     PlacarOnlineComponent.prototype.aumentarPontoAdversario = function ($param) {
-        this.sets[$param].pontoSetAtualAdversario = this.sets[$param].pontoSetAtualAdversario + 1;
+        this.sets[$param].pontoB = this.sets[$param].pontoB + 1;
+        this.sendRequest($param);
     };
     PlacarOnlineComponent.prototype.diminuirPontoSJ = function ($param) {
-        this.sets[$param].pontoSetAtualSJ = this.sets[$param].pontoSetAtualSJ - 1;
+        this.sets[$param].pontoA = this.sets[$param].pontoA - 1;
+        this.sendRequest($param);
     };
     PlacarOnlineComponent.prototype.diminuirPontoAdversario = function ($param) {
-        this.sets[$param].pontoSetAtualAdversario = this.sets[$param].pontoSetAtualAdversario - 1;
+        this.sets[$param].pontoB = this.sets[$param].pontoB - 1;
+        this.sendRequest($param);
     };
     PlacarOnlineComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'placar-online',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/'<div class="central">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="placar-tempo-real">\n\n    <p class="flex">PLACAR EM TEMPO REAL</p>\n\n  </div>\n\n\n\n  <div class="acoes-partida">\n\n    <div class="position-titulo-acoes">\n\n      <p class="titulo-acoes">AÇÕES DA PARTIDA</p>\n\n    </div>\n\n    <div class="position-botoes">\n\n      <div class="botao-esquerda">\n\n        <button class="botao-adicionar" (click)="adicionarSet()">\n\n          <p class="botao-acao-fonte">Adicionar set</p>\n\n        </button>\n\n        <button class="botao-atualizar" (click)="atualizarPlacar()">\n\n          <p class="botao-acao-fonte">Atualizar placar</p>\n\n        </button>\n\n      </div>\n\n      <div class="botao-direita">\n\n        <button class="botao-finalizar" (click)="finalizarPartida()">\n\n          <p class="botao-acao-fonte">Finalizar partida</p>\n\n        </button>\n\n      </div>\n\n    </div>\n\n  </div>\n\n\n\n  <!-- <div class="sets-position">\n\n    <p class="flex sets">SET 1</p>\n\n  </div>\n\n\n\n  <div class="sets-finalizado-pai">\n\n    <div class="position-time1-info">\n\n      <p class="flex time-info">Time 01</p>\n\n      <p class="flex time-pontos">27</p>\n\n    </div>\n\n\n\n    <div class="position-time1-info">\n\n      <p class="flex time-info">Time 02</p>\n\n      <p class="flex time-pontos">27</p>\n\n    </div>\n\n\n\n    <div class="position-set-finalizado">\n\n      <p class="flex set-finalizado">SET FINALIZADO</p>\n\n    </div>\n\n  </div> -->\n\n\n\n  <div id="set-numero-{{i}}" class="set-item" *ngFor="let item of sets; let i = index">\n\n    <div class="sets-position">\n\n      <p class="flex sets">SET {{i+1}}</p>\n\n    </div>\n\n  \n\n    <div class="sets-ativo-pai">\n\n      <div class="position-time2-info">\n\n        <p class="flex time-info">São Judas</p>\n\n        <div class="flex flex-row position-placar-botao">\n\n          <button class="botao-menos" (click)="diminuirPontoSJ(i)">-</button>\n\n          <p class="flex pontos">{{item.pontoSetAtualSJ}}</p>\n\n          <button class="botao-mais" (click)="aumentarPontoSJ(i)">+</button>\n\n        </div>\n\n      </div>\n\n  \n\n      <div class="position-time2-info">\n\n        <p class="flex time-info">Time 04</p>\n\n        <div class="flex flex-row position-placar-botao">\n\n          <button class="botao-menos" (click)="diminuirPontoAdversario(i)">-</button>\n\n          <p class="flex pontos">{{item.pontoSetAtualAdversario}}</p>\n\n          <button class="botao-mais" (click)="aumentarPontoAdversario(i)">+</button>\n\n        </div>\n\n      </div>\n\n  \n\n  \n\n      <div class="position-botao-sets">\n\n        <p class="finalizado-msg">Set Finalizado</p>\n\n        <button class="botao-atualizar-set" (click)="adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n          <p class="botao-fonte">Avançar set</p>\n\n        </button>\n\n        <button class="botao-finalizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n          <p class="botao-fonte">Finalizar set</p>\n\n        </button>\n\n      </div>\n\n  \n\n    </div>\n\n  </div>\n\n\n\n  <!-- <div class="posse-bola-titulo">\n\n    <p class="posse-fonte">Posse de bola:</p>\n\n    <button class="botao-posse-ativa">\n\n      <p class="botao-fonte">São Judas</p>\n\n    </button>\n\n    <button class="botao-posse-desativada">\n\n      <p class="botao-fonte">Visitante</p>\n\n    </button>\n\n  </div> -->\n\n</div>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/
+            selector: 'placar-online',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/'<div class="central">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="placar-tempo-real">\n\n    <p class="flex">PLACAR EM TEMPO REAL</p>\n\n  </div>\n\n\n\n  <div class="area">\n\n    <ion-item>\n\n        <ion-label stacked>ID da partida</ion-label>\n\n        <ion-input type="number" required [(ngModel)]="idPartidaAtual" name="idPartidaAtual"></ion-input>\n\n    </ion-item>\n\n    <button (click)="verificarId(idPartidaAtual)">OK!</button>\n\n  </div>\n\n\n\n  <div class="content" *ngIf="conteudoAtivo">\n\n      <div class="acoes-partida">\n\n          <div class="position-titulo-acoes">\n\n            <p class="titulo-acoes">AÇÕES DA PARTIDA</p>\n\n          </div>\n\n          <div class="position-botoes">\n\n            <div class="botao-esquerda">\n\n              <button class="botao-adicionar" (click)="adicionarSet()">\n\n                <p class="botao-acao-fonte">Adicionar set</p>\n\n              </button>\n\n              <button class="botao-atualizar" (click)="atualizarPlacar()">\n\n                <p class="botao-acao-fonte">Atualizar placar</p>\n\n              </button>\n\n            </div>\n\n            <div class="botao-direita">\n\n              <button class="botao-finalizar" (click)="finalizarPartida()">\n\n                <p class="botao-acao-fonte">Finalizar partida</p>\n\n              </button>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      \n\n        <!-- <div class="sets-position">\n\n          <p class="flex sets">SET 1</p>\n\n        </div>\n\n      \n\n        <div class="sets-finalizado-pai">\n\n          <div class="position-time1-info">\n\n            <p class="flex time-info">Time 01</p>\n\n            <p class="flex time-pontos">27</p>\n\n          </div>\n\n      \n\n          <div class="position-time1-info">\n\n            <p class="flex time-info">Time 02</p>\n\n            <p class="flex time-pontos">27</p>\n\n          </div>\n\n      \n\n          <div class="position-set-finalizado">\n\n            <p class="flex set-finalizado">SET FINALIZADO</p>\n\n          </div>\n\n        </div> -->\n\n      \n\n        <div id="set-numero-{{i+1}}" class="set-item" *ngFor="let item of sets; let i = index">\n\n          <div class="sets-position">\n\n            <p class="flex sets">SET {{i+1}}</p>\n\n          </div>\n\n        \n\n          <div class="sets-ativo-pai">\n\n            <div class="position-time2-info">\n\n              <p class="flex time-info">São Judas</p>\n\n              <div class="flex flex-row position-placar-botao">\n\n                <button class="botao-menos" (click)="diminuirPontoSJ(i)">-</button>\n\n                <p class="flex pontos">{{item.pontoA}}</p>\n\n                <button class="botao-mais" (click)="aumentarPontoSJ(i)">+</button>\n\n              </div>\n\n            </div>\n\n        \n\n            <div class="position-time2-info">\n\n              <p class="flex time-info">Time 04</p>\n\n              <div class="flex flex-row position-placar-botao">\n\n                <button class="botao-menos" (click)="diminuirPontoAdversario(i)">-</button>\n\n                <p class="flex pontos">{{item.pontoB}}</p>\n\n                <button class="botao-mais" (click)="aumentarPontoAdversario(i)">+</button>\n\n              </div>\n\n            </div>\n\n        \n\n        \n\n            <div class="position-botao-sets">\n\n              <p class="finalizado-msg">Set Finalizado</p>\n\n              <button class="botao-atualizar-set" (click)="adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n                <p class="botao-fonte">Avançar set</p>\n\n              </button>\n\n              <button class="botao-finalizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n                <p class="botao-fonte">Finalizar set</p>\n\n              </button>\n\n            </div>\n\n        \n\n          </div>\n\n        </div>\n\n      \n\n        <!-- <div class="posse-bola-titulo">\n\n          <p class="posse-fonte">Posse de bola:</p>\n\n          <button class="botao-posse-ativa">\n\n            <p class="botao-fonte">São Judas</p>\n\n          </button>\n\n          <button class="botao-posse-desativada">\n\n            <p class="botao-fonte">Visitante</p>\n\n          </button>\n\n        </div> -->\n\n  </div>\n\n</div>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]) === "function" && _c || Object])
     ], PlacarOnlineComponent);
@@ -1015,13 +1018,186 @@ var PlacarOnlineComponent = (function () {
 
 /***/ }),
 
-/***/ 50:
+/***/ 303:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacarOnlinePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the PlacarOnlinePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PlacarOnlinePage = (function () {
+    function PlacarOnlinePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    PlacarOnlinePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PlacarOnlinePage');
+    };
+    PlacarOnlinePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-placar-online',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\placar-online\placar-online.html"*/'<!--\n\n  Generated template for the PlacarOnlinePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n      <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n    <ion-title>Placar online</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <menu-lateral></menu-lateral>\n\n  <placar-online></placar-online>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\placar-online\placar-online.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], PlacarOnlinePage);
+    return PlacarOnlinePage;
+}());
+
+//# sourceMappingURL=placar-online.js.map
+
+/***/ }),
+
+/***/ 46:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProviderPartidasProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the ProviderPartidasProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ProviderPartidasProvider = (function () {
+    function ProviderPartidasProvider(http) {
+        this.http = http;
+        this.baseApiPath = 'http://jazz.lucasduarte.club/api/';
+    }
+    ProviderPartidasProvider.prototype.getAllPartidas = function () {
+        var _this = this;
+        var url = this.baseApiPath + 'partidas/';
+        if (this.data) {
+            return Promise.resolve(this.data);
+        }
+        return new Promise(function (resolve) {
+            _this.http
+                .get(url)
+                .map(function (res) { return res.json(); })
+                .subscribe(function (data) {
+                _this.data = data;
+                resolve(_this.data);
+                //console.log("passouUUU", this.data);
+                // this.partidaAtual = data[0];
+                // this.idPartidaAtual = this.partidaAtual.id;
+            }, function (error) {
+                console.log("Erro no provider de partidas");
+            });
+        });
+    };
+    ProviderPartidasProvider.prototype.criarPartida = function (body) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.http.post(_this.baseApiPath + 'partidas/', body)
+                .toPromise()
+                .then(function (response) {
+                console.log('API Response : ', response.json());
+                resolve(response.json());
+            })
+                .catch(function (error) {
+                console.error('API Error : ', error.status);
+                console.error('API Error : ', JSON.stringify(error));
+                reject(error.json());
+            });
+        });
+    };
+    ProviderPartidasProvider.prototype.criarSet = function (body) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.http.post(_this.baseApiPath + 'set/', body)
+                .toPromise()
+                .then(function (response) {
+                console.log('API SET Response : ', response.json());
+                resolve(response.json());
+            })
+                .catch(function (error) {
+                console.error('API SET Error : ', error.status);
+                console.error('API SET Error : ', JSON.stringify(error));
+                reject(error.json());
+            });
+        });
+    };
+    ProviderPartidasProvider.prototype.getSets = function (id) {
+        var _this = this;
+        var url = this.baseApiPath + 'setPartida/?partidaId=' + id;
+        if (this.data) {
+            return Promise.resolve(this.data);
+        }
+        return new Promise(function (resolve) {
+            _this.http
+                .get(url)
+                .map(function (res) { return res; })
+                .subscribe(function (data) {
+                _this.totalSets = data;
+                console.log("Sets ae", _this.totalSets);
+            }, function (error) {
+                console.log("Erro no provider de sets");
+            });
+        });
+    };
+    ProviderPartidasProvider.prototype.atualizarSet = function (id, body) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.http.put(_this.baseApiPath + 'set/' + id, body)
+                .toPromise()
+                .then(function (response) {
+                console.log('API SET ATUALIZOU Response : ', response.json());
+                resolve(response.json());
+            })
+                .catch(function (error) {
+                console.error('API SET ATUALIZOU Error : ', error.status);
+                console.error('API SET Error : ', JSON.stringify(error));
+                reject(error.json());
+            });
+        });
+    };
+    ProviderPartidasProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    ], ProviderPartidasProvider);
+    return ProviderPartidasProvider;
+    var _a;
+}());
+
+//# sourceMappingURL=provider-partidas.js.map
+
+/***/ }),
+
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1050,13 +1226,13 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastrarPartidaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1095,5 +1271,5 @@ var CadastrarPartidaPage = (function () {
 
 /***/ })
 
-},[206]);
+},[207]);
 //# sourceMappingURL=main.js.map

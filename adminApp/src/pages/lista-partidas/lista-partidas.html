@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ListaPartidasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de Partidas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <menu-lateral></menu-lateral>
+  <ion-list>
+    <div class="actions">
+      <button (click)="openCadastroPartidas()">Adicionar nova partida</button>
+    </div>
+    <ion-card *ngFor="let item of lista" class="card-item">
+      <p>ID da partida: {{item.id}}</p>
+      <h2>São Judas</h2> vs <h2>{{item.timeB}}</h2>
+      <p>{{item.data}}</p>
+      <div class="status finalizada" *ngIf="item.partidaFinalizada">Partida finalizada</div>
+      <div class="status iniciada" *ngIf="item.partidaIniciada">Partida iniciada</div>
+      <div class="status aberto" *ngIf="!item.partidaIniciada">Partida em aberto</div>
+    </ion-card>
+  </ion-list>
+</ion-content>

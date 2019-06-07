@@ -26202,7 +26202,9 @@ menu-lateral .coluna-esquerda-cima .info-usuario #lblEmail {
 
 placar-online {
   background-color: #f4f4f4;
-  width: 90%;
+  width: calc(100% - 300px);
+  margin-left: 300px !important;
+  position: fixed;
 }
 
 placar-online p {
@@ -26226,6 +26228,20 @@ placar-online input {
 
 placar-online button {
   font-family: sans-serif;
+}
+
+placar-online .area {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+}
+
+placar-online .area button {
+  background-color: #0f558b;
+  color: #fff;
+  font-size: 20px;
 }
 
 placar-online .flex {
@@ -26761,4 +26777,100 @@ page-home {
   color: #fff;
   width: 100%;
   text-align: center;
+}
+
+page-lista-partidas ion-list {
+  background-color: #F4F4F4;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  width: calc(100% - 300px);
+  margin-left: 300px !important;
+}
+
+page-lista-partidas ion-list .actions {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+page-lista-partidas ion-list .actions button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: green;
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+page-lista-partidas .card-item {
+  padding: 30px;
+  -webkit-flex-basis: calc(100% / 3 - 25px);
+  -ms-flex-preferred-size: calc(100% / 3 - 25px);
+  flex-basis: calc(100% / 3 - 25px);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+page-lista-partidas .card-item h2 {
+  color: #1b3b7d;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+}
+
+page-lista-partidas .card-item .status {
+  position: relative;
+  display: inline-block;
+}
+
+page-lista-partidas .card-item .status:before {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  width: 8px;
+  height: 8px;
+}
+
+page-lista-partidas .card-item .status.aberto {
+  color: green;
+}
+
+page-lista-partidas .card-item .status.aberto::before {
+  background-color: green;
+}
+
+page-lista-partidas .card-item .status.iniciada {
+  color: orange;
+}
+
+page-lista-partidas .card-item .status.iniciada::before {
+  background-color: orange;
+}
+
+page-lista-partidas .card-item .status.finalizada {
+  color: red;
+}
+
+page-lista-partidas .card-item .status.finalizada::before {
+  background-color: red;
 }
