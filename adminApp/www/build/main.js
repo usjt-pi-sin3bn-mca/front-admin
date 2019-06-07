@@ -402,14 +402,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_login_login__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_provider_partidas_provider_partidas__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_lista_partidas_lista_partidas__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__ = __webpack_require__(303);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -451,8 +449,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_15__components_login_screen_login_screen__["a" /* LoginScreenComponent */],
                 __WEBPACK_IMPORTED_MODULE_16__components_cadastro_partidas_cadastro_partidas__["a" /* CadastroPartidasComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__components_menu_lateral_menu_lateral__["a" /* MenuLateralComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__["a" /* PlacarOnlineComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__["a" /* PlacarOnlinePage */]
+                __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__["a" /* PlacarOnlineComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -465,8 +462,7 @@ var AppModule = (function () {
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/marketplace/marketplace.module#MarketplacePageModule', name: 'MarketplacePage', segment: 'marketplace', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/placar/placar.module#PlacarPageModule', name: 'PlacarPage', segment: 'placar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/placar-online/placar-online.module#PlacarOnlinePageModule', name: 'PlacarOnlinePage', segment: 'placar-online', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_9__angular_common_http__["b" /* HttpClientModule */],
@@ -481,7 +477,6 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__["a" /* PlacarPage */],
                 __WEBPACK_IMPORTED_MODULE_21__pages_lista_partidas_lista_partidas__["a" /* ListaPartidasPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_cadastrar_partida_cadastrar_partida__["a" /* CadastrarPartidaPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__["a" /* PlacarOnlinePage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_test_test__["a" /* TestPage */],
                 __WEBPACK_IMPORTED_MODULE_14__components_tela_home_tela_home__["a" /* TelaHomeComponent */],
                 __WEBPACK_IMPORTED_MODULE_19__pages_login_login__["a" /* LoginPage */],
@@ -688,7 +683,7 @@ var TelaHomeComponent = (function () {
     };
     TelaHomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'tela-home',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/'  <div class="sessoes">\n\n    <div class="cima">\n\n      <div id="boxPlacarOnline" class="box" (click)="openCadastroPartidas()">\n\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n\n        <label id="lblPlacarOnline" type="text">Partidas</label>\n\n      </div>\n\n            \n\n      <div id="boxMarketplace" class="box" (click)="indisponivel()">\n\n        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">\n\n        <label id="lblMarketplace" type="text">Marketplace</label>\n\n      </div>\n\n    </div>\n\n\n\n    <div class="baixo">\n\n      <div id="boxLojaDaTorcida" class="box" (click)="indisponivel()">\n\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n\n      </div>\n\n            \n\n      <div id="boxMinhaConta" class="box" (click)="indisponivel()">\n\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n\n      </div>\n\n    </div>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/
+            selector: 'tela-home',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/'  <div class="sessoes">\n\n    <div class="cima">\n\n      <div id="boxPlacarOnline" class="box" (click)="openCadastroPartidas()">\n\n        <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">\n\n        <label id="lblPlacarOnline" type="text">Placar Online</label>\n\n      </div>\n\n            \n\n      <div id="boxMarketplace" class="box" (click)="indisponivel()">\n\n        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">\n\n        <label id="lblMarketplace" type="text">Marketplace</label>\n\n      </div>\n\n    </div>\n\n\n\n    <div class="baixo">\n\n      <div id="boxLojaDaTorcida" class="box" (click)="indisponivel()">\n\n        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">\n\n        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>\n\n      </div>\n\n            \n\n      <div id="boxMinhaConta" class="box" (click)="indisponivel()">\n\n        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">\n\n        <label id="lblMinhaConta" type="text">Minha Conta</label>\n\n      </div>\n\n    </div>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\tela-home\tela-home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], TelaHomeComponent);
@@ -829,7 +824,7 @@ var CadastroPartidasComponent = (function () {
     };
     CadastroPartidasComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'cadastro-partidas',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/'<div class="central" *ngIf="!partidaEmAndamento">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="adicionar-partida">\n\n      <p class="flex">Adicionar partida</p>\n\n  </div>\n\n\n\n  <div class="times">\n\n    <p class="flex">TIMES</p>\n\n  </div>\n\n\n\n  <div class="novo-adversario">\n\n    <img src="../../assets/imgs/logo-usjt.png" class="usjt-icon">\n\n\n\n    <div class="adversario-info">\n\n      <p class="adversario-titulo">Adversário</p>\n\n\n\n    <form class="flex flex-column">\n\n        <input type="text" [(ngModel)]="bodyRequest.timeB" name="timeB" placeholder="Nome do time" class="adversario-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.urlLogoAdv" name="urlLogoAdv" placeholder="URL do logo" class="adversario-info-input">\n\n    </form>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="partida-info">\n\n    <p class="detalhes-partida">DETALHES DA PARTIDA</p>\n\n\n\n    <form class="partida-info-form">\n\n      <div>\n\n        <input type="text" [(ngModel)]="bodyRequest.data" name="data" placeholder="Data" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.hora" name="hora" placeholder="Horário" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.local" name="local" placeholder="Local" class="partida-info-input">\n\n      </div>\n\n      <div>\n\n        <!-- <input type="text" [(ngModel)]="bodyRequest.campeonatoNome" name="campeonatoNome" placeholder="Campeonato" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.visitante" name="visitante" placeholder="São Judas como visitante?" class="partida-info-input"> -->\n\n      </div>\n\n    </form>\n\n\n\n    <div class="position-botao">\n\n      <button class="botao-avancar" (click)="sendRequest()">\n\n        <p class="avancar">Avançar</p>\n\n      </button>\n\n    </div>\n\n  </div>\n\n</div>\n\n\n\n<placar-online *ngIf="partidaEmAndamento"></placar-online>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/
+            selector: 'cadastro-partidas',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/'<div class="central" *ngIf="!partidaEmAndamento">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="adicionar-partida">\n\n      <p class="flex">Adicionar partida</p>\n\n  </div>\n\n\n\n  <div class="times">\n\n    <p class="flex">TIMES</p>\n\n  </div>\n\n\n\n  <div class="novo-adversario">\n\n    <img src="../../assets/imgs/logo-usjt.png" class="usjt-icon">\n\n\n\n    <div class="adversario-info">\n\n      <p class="adversario-titulo">Adversário</p>\n\n\n\n    <form class="flex flex-column">\n\n        <input type="text" [(ngModel)]="bodyRequest.timeB" name="timeB" placeholder="Nome do time" class="adversario-info-input">\n\n        {{timeB}}\n\n        <input type="text" [(ngModel)]="bodyRequest.urlLogoAdv" name="urlLogoAdv" placeholder="URL do logo" class="adversario-info-input">\n\n    </form>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="partida-info">\n\n    <p class="detalhes-partida">DETALHES DA PARTIDA</p>\n\n\n\n    <form class="partida-info-form">\n\n      <div>\n\n        <input type="text" [(ngModel)]="bodyRequest.data" name="data" placeholder="Data" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.hora" name="hora" placeholder="Horário" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.local" name="local" placeholder="Local" class="partida-info-input">\n\n      </div>\n\n      <div>\n\n        <!-- <input type="text" [(ngModel)]="bodyRequest.campeonatoNome" name="campeonatoNome" placeholder="Campeonato" class="partida-info-input">\n\n        <input type="text" [(ngModel)]="bodyRequest.visitante" name="visitante" placeholder="São Judas como visitante?" class="partida-info-input"> -->\n\n      </div>\n\n    </form>\n\n\n\n    <div class="position-botao">\n\n      <button class="botao-avancar" (click)="sendRequest()">\n\n        <p class="avancar">Avançar</p>\n\n      </button>\n\n    </div>\n\n  </div>\n\n</div>\n\n\n\n<placar-online *ngIf="partidaEmAndamento"></placar-online>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\cadastro-partidas\cadastro-partidas.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]])
     ], CadastroPartidasComponent);
@@ -918,12 +913,37 @@ var PlacarOnlineComponent = (function () {
         this.pontoSetAtualSJ = 0;
         this.pontoSetAtualAdversario = 0;
         this.baseApiPath = 'http://jazz.lucasduarte.club/api/';
-        this.conteudoAtivo = false;
-        this.getSets();
+        this.connectApi();
+        //console.log("aesdsfsfsf:", this.idPartidaAtual);
     }
-    PlacarOnlineComponent.prototype.getSets = function () {
+    PlacarOnlineComponent.prototype.connectApi = function () {
         var _this = this;
-        var url = this.baseApiPath + 'setPartida/?partidaId=' + this.idPartidaAtual;
+        var url = this.baseApiPath + 'partidas/';
+        if (this.dataObj) {
+            return Promise.resolve(this.dataObj);
+        }
+        return new Promise(function (resolve) {
+            _this.http
+                .get(url)
+                .map(function (res) { return res; })
+                .subscribe(function (dataObj) {
+                _this.data = dataObj;
+                resolve(_this.data);
+                // console.log("passou no placar", this.data);
+                var idPartidaAtual;
+                idPartidaAtual = _this.data[0].id;
+                _this.idPartidaAtual = _this.data[0].id;
+                console.log("set sok:", _this.sets);
+                console.log("lala", idPartidaAtual);
+                _this.getSets(idPartidaAtual);
+            }, function (error) {
+                console.log("Erro no provider de getSets");
+            });
+        });
+    };
+    PlacarOnlineComponent.prototype.getSets = function (id) {
+        var _this = this;
+        var url = this.baseApiPath + 'setPartida/?partidaId=' + id;
         if (this.data) {
             return Promise.resolve(this.data);
         }
@@ -940,9 +960,8 @@ var PlacarOnlineComponent = (function () {
         });
     };
     PlacarOnlineComponent.prototype.atualizarPlacar = function () {
-        this.getSets();
     };
-    PlacarOnlineComponent.prototype.adicionarSet = function () {
+    PlacarOnlineComponent.prototype.adicionarSet = function (id, pontoSJ, pontoAdv) {
         var setZerado = {
             "pontoA": 0,
             "pontoB": 0,
@@ -956,23 +975,8 @@ var PlacarOnlineComponent = (function () {
         };
         // console.log("zerado", setZerado);
         this._partidasProvider.criarSet(setZerado);
-        this.getSets();
-    };
-    PlacarOnlineComponent.prototype.verificarId = function (id) {
-        if (id > 0) {
-            this.conteudoAtivo = true;
-        }
-        else {
-            alert("Número inválido");
-        }
     };
     PlacarOnlineComponent.prototype.finalizarSet = function (id, pontoSJ, pontoAdv) {
-        if (this.sets[id].pontoA > this.sets[id].pontoB) {
-            this.sets[id].ganhador = "Sao Judas";
-        }
-        else {
-            this.sets[id].ganhador = "Adversário";
-        }
         var element = document.getElementById("set-numero-" + id);
         element.classList.add("inactive");
         this.sets[id].setFinalizado = "true";
@@ -981,37 +985,26 @@ var PlacarOnlineComponent = (function () {
         alert("A Partida foi finalizada com sucesso.");
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pages_home_home__["a" /* HomePage */]);
     };
-    PlacarOnlineComponent.prototype.sendRequest = function (id) {
-        var body = this.sets;
-        body = body[id];
-        console.log("body", body);
-        this._partidasProvider.atualizarSet(body.id, body);
-    };
     PlacarOnlineComponent.prototype.aumentarPontoSJ = function ($param) {
-        this.sets[$param].pontoA = this.sets[$param].pontoA + 1;
-        console.log(this.sets[$param].pontoA);
-        this.sendRequest($param);
+        this.sets[$param].pontoSetAtualSJ = this.sets[$param].pontoSetAtualSJ + 1;
+        console.log(this.pontoSetAtualSJ);
     };
     PlacarOnlineComponent.prototype.aumentarPontoAdversario = function ($param) {
-        this.sets[$param].pontoB = this.sets[$param].pontoB + 1;
-        this.sendRequest($param);
+        this.sets[$param].pontoSetAtualAdversario = this.sets[$param].pontoSetAtualAdversario + 1;
     };
     PlacarOnlineComponent.prototype.diminuirPontoSJ = function ($param) {
-        this.sets[$param].pontoA = this.sets[$param].pontoA - 1;
-        this.sendRequest($param);
+        this.sets[$param].pontoSetAtualSJ = this.sets[$param].pontoSetAtualSJ - 1;
     };
     PlacarOnlineComponent.prototype.diminuirPontoAdversario = function ($param) {
-        this.sets[$param].pontoB = this.sets[$param].pontoB - 1;
-        this.sendRequest($param);
+        this.sets[$param].pontoSetAtualAdversario = this.sets[$param].pontoSetAtualAdversario - 1;
     };
     PlacarOnlineComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'placar-online',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/'<div class="central">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="placar-tempo-real">\n\n    <p class="flex">PLACAR EM TEMPO REAL</p>\n\n  </div>\n\n\n\n  <div class="area">\n\n    <ion-item>\n\n        <ion-label stacked>ID da partida</ion-label>\n\n        <ion-input type="number" required [(ngModel)]="idPartidaAtual" name="idPartidaAtual"></ion-input>\n\n    </ion-item>\n\n    <button (click)="verificarId(idPartidaAtual)">OK!</button>\n\n  </div>\n\n\n\n  <div class="content" *ngIf="conteudoAtivo">\n\n      <div class="acoes-partida">\n\n          <div class="position-titulo-acoes">\n\n            <p class="titulo-acoes">AÇÕES DA PARTIDA</p>\n\n          </div>\n\n          <div class="position-botoes">\n\n            <div class="botao-esquerda">\n\n              <button class="botao-adicionar" (click)="adicionarSet()">\n\n                <p class="botao-acao-fonte">Adicionar set</p>\n\n              </button>\n\n              <button class="botao-atualizar" (click)="atualizarPlacar()">\n\n                <p class="botao-acao-fonte">Atualizar placar</p>\n\n              </button>\n\n            </div>\n\n            <div class="botao-direita">\n\n              <button class="botao-finalizar" (click)="finalizarPartida()">\n\n                <p class="botao-acao-fonte">Finalizar partida</p>\n\n              </button>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      \n\n        <!-- <div class="sets-position">\n\n          <p class="flex sets">SET 1</p>\n\n        </div>\n\n      \n\n        <div class="sets-finalizado-pai">\n\n          <div class="position-time1-info">\n\n            <p class="flex time-info">Time 01</p>\n\n            <p class="flex time-pontos">27</p>\n\n          </div>\n\n      \n\n          <div class="position-time1-info">\n\n            <p class="flex time-info">Time 02</p>\n\n            <p class="flex time-pontos">27</p>\n\n          </div>\n\n      \n\n          <div class="position-set-finalizado">\n\n            <p class="flex set-finalizado">SET FINALIZADO</p>\n\n          </div>\n\n        </div> -->\n\n      \n\n        <div id="set-numero-{{i+1}}" class="set-item" *ngFor="let item of sets; let i = index">\n\n          <div class="sets-position">\n\n            <p class="flex sets">SET {{i+1}}</p>\n\n          </div>\n\n        \n\n          <div class="sets-ativo-pai">\n\n            <div class="position-time2-info">\n\n              <p class="flex time-info">São Judas</p>\n\n              <div class="flex flex-row position-placar-botao">\n\n                <button class="botao-menos" (click)="diminuirPontoSJ(i)">-</button>\n\n                <p class="flex pontos">{{item.pontoA}}</p>\n\n                <button class="botao-mais" (click)="aumentarPontoSJ(i)">+</button>\n\n              </div>\n\n            </div>\n\n        \n\n            <div class="position-time2-info">\n\n              <p class="flex time-info">Time 04</p>\n\n              <div class="flex flex-row position-placar-botao">\n\n                <button class="botao-menos" (click)="diminuirPontoAdversario(i)">-</button>\n\n                <p class="flex pontos">{{item.pontoB}}</p>\n\n                <button class="botao-mais" (click)="aumentarPontoAdversario(i)">+</button>\n\n              </div>\n\n            </div>\n\n        \n\n        \n\n            <div class="position-botao-sets">\n\n              <p class="finalizado-msg">Set Finalizado</p>\n\n              <button class="botao-atualizar-set" (click)="adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n                <p class="botao-fonte">Avançar set</p>\n\n              </button>\n\n              <button class="botao-finalizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n                <p class="botao-fonte">Finalizar set</p>\n\n              </button>\n\n            </div>\n\n        \n\n          </div>\n\n        </div>\n\n      \n\n        <!-- <div class="posse-bola-titulo">\n\n          <p class="posse-fonte">Posse de bola:</p>\n\n          <button class="botao-posse-ativa">\n\n            <p class="botao-fonte">São Judas</p>\n\n          </button>\n\n          <button class="botao-posse-desativada">\n\n            <p class="botao-fonte">Visitante</p>\n\n          </button>\n\n        </div> -->\n\n  </div>\n\n</div>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/
+            selector: 'placar-online',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/'<div class="central">\n\n  <div class="titulo-cadastro">\n\n    <img src="../../assets/imgs/icon-hearder-placar.png">\n\n    <div>\n\n      <p class="titulo-partida">Placar Online</p>\n\n    </div>\n\n  </div>\n\n\n\n  <div class="placar-tempo-real">\n\n    <p class="flex">PLACAR EM TEMPO REAL</p>\n\n  </div>\n\n\n\n  <div class="acoes-partida">\n\n    <div class="position-titulo-acoes">\n\n      <p class="titulo-acoes">AÇÕES DA PARTIDA</p>\n\n    </div>\n\n    <div class="position-botoes">\n\n      <div class="botao-esquerda">\n\n        <button class="botao-adicionar" (click)="adicionarSet()">\n\n          <p class="botao-acao-fonte">Adicionar set</p>\n\n        </button>\n\n        <button class="botao-atualizar" (click)="atualizarPlacar()">\n\n          <p class="botao-acao-fonte">Atualizar placar</p>\n\n        </button>\n\n      </div>\n\n      <div class="botao-direita">\n\n        <button class="botao-finalizar" (click)="finalizarPartida()">\n\n          <p class="botao-acao-fonte">Finalizar partida</p>\n\n        </button>\n\n      </div>\n\n    </div>\n\n  </div>\n\n\n\n  <!-- <div class="sets-position">\n\n    <p class="flex sets">SET 1</p>\n\n  </div>\n\n\n\n  <div class="sets-finalizado-pai">\n\n    <div class="position-time1-info">\n\n      <p class="flex time-info">Time 01</p>\n\n      <p class="flex time-pontos">27</p>\n\n    </div>\n\n\n\n    <div class="position-time1-info">\n\n      <p class="flex time-info">Time 02</p>\n\n      <p class="flex time-pontos">27</p>\n\n    </div>\n\n\n\n    <div class="position-set-finalizado">\n\n      <p class="flex set-finalizado">SET FINALIZADO</p>\n\n    </div>\n\n  </div> -->\n\n\n\n  <div id="set-numero-{{i}}" class="set-item" *ngFor="let item of sets; let i = index">\n\n    <div class="sets-position">\n\n      <p class="flex sets">SET {{i+1}}</p>\n\n    </div>\n\n  \n\n    <div class="sets-ativo-pai">\n\n      <div class="position-time2-info">\n\n        <p class="flex time-info">São Judas</p>\n\n        <div class="flex flex-row position-placar-botao">\n\n          <button class="botao-menos" (click)="diminuirPontoSJ(i)">-</button>\n\n          <p class="flex pontos">{{item.pontoSetAtualSJ}}</p>\n\n          <button class="botao-mais" (click)="aumentarPontoSJ(i)">+</button>\n\n        </div>\n\n      </div>\n\n  \n\n      <div class="position-time2-info">\n\n        <p class="flex time-info">Time 04</p>\n\n        <div class="flex flex-row position-placar-botao">\n\n          <button class="botao-menos" (click)="diminuirPontoAdversario(i)">-</button>\n\n          <p class="flex pontos">{{item.pontoSetAtualAdversario}}</p>\n\n          <button class="botao-mais" (click)="aumentarPontoAdversario(i)">+</button>\n\n        </div>\n\n      </div>\n\n  \n\n  \n\n      <div class="position-botao-sets">\n\n        <p class="finalizado-msg">Set Finalizado</p>\n\n        <button class="botao-atualizar-set" (click)="adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n          <p class="botao-fonte">Avançar set</p>\n\n        </button>\n\n        <button class="botao-finalizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">\n\n          <p class="botao-fonte">Finalizar set</p>\n\n        </button>\n\n      </div>\n\n  \n\n    </div>\n\n  </div>\n\n\n\n  <!-- <div class="posse-bola-titulo">\n\n    <p class="posse-fonte">Posse de bola:</p>\n\n    <button class="botao-posse-ativa">\n\n      <p class="botao-fonte">São Judas</p>\n\n    </button>\n\n    <button class="botao-posse-desativada">\n\n      <p class="botao-fonte">Visitante</p>\n\n    </button>\n\n  </div> -->\n\n</div>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\placar-online\placar-online.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__providers_provider_partidas_provider_partidas__["a" /* ProviderPartidasProvider */]])
     ], PlacarOnlineComponent);
     return PlacarOnlineComponent;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=placar-online.js.map
@@ -1166,14 +1159,14 @@ var ProviderPartidasProvider = (function () {
     ProviderPartidasProvider.prototype.atualizarSet = function (id, body) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            _this.http.put(_this.baseApiPath + 'set/' + id, body)
+            _this.http.post(_this.baseApiPath + 'set/' + id, body)
                 .toPromise()
                 .then(function (response) {
-                console.log('API SET ATUALIZOU Response : ', response.json());
+                console.log('API SET KKKK Response : ', response.json());
                 resolve(response.json());
             })
                 .catch(function (error) {
-                console.error('API SET ATUALIZOU Error : ', error.status);
+                console.error('API SET KKKKK Error : ', error.status);
                 console.error('API SET Error : ', JSON.stringify(error));
                 reject(error.json());
             });
@@ -1181,10 +1174,9 @@ var ProviderPartidasProvider = (function () {
     };
     ProviderPartidasProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]])
     ], ProviderPartidasProvider);
     return ProviderPartidasProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=provider-partidas.js.map
