@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { ConvenioProvider } from '../../providers/convenio/convenio';
 
 /**
  * Generated class for the ConveniosComponent component.
@@ -11,12 +13,24 @@ import { Component } from '@angular/core';
   templateUrl: 'convenios.html'
 })
 export class ConveniosComponent {
-
+  convenio : any ={
+    nome: "",
+    nomeReponsavel: "",
+    cpf: "",
+    fone: "",
+    email: "",
+    endereco:"",
+    pontuacaoQRCode: ""
+  }
   text: string;
 
-  constructor() {
-    console.log('Hello ConveniosComponent Component');
-    this.text = 'Hello World';
+  constructor( public navCtrl: NavController, public _providerCovenio : ConvenioProvider) {
+      
   }
+
+  cadastrarConvenio(){
+    this._providerCovenio.cadastrarConvenio(this.convenio);
+  }
+
 
 }

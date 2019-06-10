@@ -1,0 +1,49 @@
+<!--
+  Generated template for the CadastroConvenioPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>Experiência</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  <ion-content>
+        <menu-lateral></menu-lateral>
+  <div class="central">
+    <!-- <div class="titulo-cadastro">
+        <img src="../../assets/imgs/marketplace.svg" class="icone-convenio">
+        <div>
+          <p class="titulo-partida">MARKETPLACE</p>
+        </div>
+    </div> -->
+
+    <div class="cadastro-de-convenios">
+        <p class="flex">Cadastro de Experiencia</p>
+    </div>
+
+    <div class="convenios">
+        <p class="flex">Experiencia</p>
+      </div>
+
+      <form class="flex flex-column" id="usrform">
+          <input type="text" [(ngModel)]="experiencia.nome" name="nome" placeholder="Nome Experiencia" class="convenio-info-input">
+          <input type="text" [(ngModel)]="experiencia.data" name="data" placeholder="Data" class="convenio-info-input">
+          <input type="text" [(ngModel)]="experiencia.custo" name="custo" placeholder="custo" class="convenio-info-input">
+          <input type="text" [(ngModel)]="experiencia.local" name="local" placeholder="Local" class="convenio-info-input">
+          <input type="text" [(ngModel)]="experiencia.qtdDisponivel" name="qtdDisponivel" placeholder="Quantidade disponivel" class="convenio-info-input">
+          <textarea [(ngModel)]="experiencia.descricao" name="descricao" form="usrform" placeholder="Descrição da experiencia" class="convenio-descricao"></textarea>
+
+      </form>
+      <div class="position-botao">
+        <button class="botao-cadastrar" (click)="cadastrarExperiencia()"><p class="cadastrar">Avançar</p></button>
+      
+      </div>
+
+</div>
+  </ion-content>

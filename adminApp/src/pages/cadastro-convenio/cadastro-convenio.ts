@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ConvenioProvider } from '../../providers/convenio/convenio';
+import { ListaConvenioPage } from '../lista-convenio/lista-convenio';
 
 /**
  * Generated class for the CadastroConvenioPage page.
@@ -15,11 +17,37 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CadastroConvenioPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  convenio : any ={
+    nome: "",
+    nomeReponsavel: "",
+    cpf: "",
+    fone: "",
+    email: "",
+    endereco:"",
+    pontuacaoQRCode: "",
+    id:""
+  }
+  existente : boolean = false;
+  text: string;
+
+  constructor( public navCtrl: NavController, public navParams: NavParams, public _providerCovenio : ConvenioProvider) {
+   if( this.navParams.get("convnioSelecionado")!= null){
+      this.convenio = this.navParams.get("convnioSelecionado");
+      this.existente = true;
+   }
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroConvenioPage');
+  cadastrarConvenio(){
+    this._providerCovenio.cadastrarConvenio(this.convenio);
+    this.navCtrl.setRoot(ListaConvenioPage);
+  }
+  alterarConvenio(){
+    this._providerCovenio.alterarConvenio(this.convenio.id,this.convenio);
+    this.navCtrl.setRoot(ListaConvenioPage);
+  }
+  excluirConvenio(){
+    this._providerCovenio.deletarConvenio(this.convenio.id);
+    this.navCtrl.setRoot(ListaConvenioPage);
   }
 
 }

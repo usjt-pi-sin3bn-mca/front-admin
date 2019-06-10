@@ -15,15 +15,17 @@
       </div>
 
       <form class="flex flex-column" id="usrform">
-          <input type="text" placeholder="Nome do convênio" class="convenio-info-input">
-          <input type="text" placeholder="URL do icone" class="convenio-info-input">
-          <input type="text" placeholder="Descrição do convênio" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.nome" name="nome" placeholder="Nome do convênio" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.nomeReponsavel" name="nomeReponsavel" placeholder="Nome do Responsavel" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.cpf" name="cpf"  placeholder="CPF" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.fone" name="fone" placeholder="Telefone" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.email" name="E-mail" placeholder="E-mail" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.endereco" name="Endereco" placeholder="Endereço" class="convenio-info-input">
+          <input type="text" [(ngModel)]="convenio.pontuacaoQRCode" name="Pontuacao" placeholder="Pontuação QRCode" class="convenio-info-input">
+
       </form>
-
-      <textarea name="descricao-convenio" form="usrform" placeholder="Descrição do convênio" class="convenio-descricao"></textarea>
-
       <div class="position-botao">
-          <button class="botao-cadastrar"><p class="cadastrar">Avançar</p></button>
+          <button class="botao-cadastrar" (click)="cadastrarConvenio()"><p class="cadastrar">Avançar</p></button>
       </div>
 
 </div>
