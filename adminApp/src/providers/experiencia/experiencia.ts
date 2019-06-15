@@ -10,9 +10,8 @@ import { ToastController } from 'ionic-angular';
 */
 @Injectable()
 export class ExperienciaProvider  {
-  private baseApiPath = 'https://maestro.lucasduarte.club/api/';
+  private baseApiPath = 'http://rock.lucasduarte.club/maestro/api/';
   public apiResult: any;
-  
   data: any;
   headers: any;
  
@@ -23,7 +22,7 @@ export class ExperienciaProvider  {
   cadastrarExperiencia(body) {
     return new Promise(
           result => {
-                this.http.post(this.baseApiPath + 'experiencia/', body,{
+                this.http.post(this.baseApiPath + 'experiencia', body,{
                       headers: new HttpHeaders().set('Content-Type', 'application/json')
                 })
                       .subscribe(data => {
@@ -36,7 +35,7 @@ export class ExperienciaProvider  {
     );
   }
   getExperiencia() {
-    let url = this.baseApiPath + 'experiencia/';
+    let url = this.baseApiPath + 'experiencia';
 
     if (this.data) {
       return Promise.resolve(this.data);

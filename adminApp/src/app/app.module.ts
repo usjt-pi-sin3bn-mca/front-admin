@@ -32,6 +32,7 @@ import { ConveniosComponent } from '../components/convenios/convenios';
 import { ListaConvenioPage } from '../pages/lista-convenio/lista-convenio';
 import { ListaExperienciaPage } from '../pages/lista-experiencia/lista-experiencia';
 import { CadastroExperienciaPage } from '../pages/cadastro-experiencia/cadastro-experiencia';
+import { LoginProvider } from '../providers/login/login';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { CadastroExperienciaPage } from '../pages/cadastro-experiencia/cadastro-
     ProviderPartidasProvider,
     ConvenioProvider,
     ExperienciaProvider,
-    UserProvider
+    UserProvider,
+    LoginProvider
   ]
 })
 export class AppModule {}

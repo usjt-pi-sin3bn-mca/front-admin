@@ -9,9 +9,9 @@
         <label id="lblAdministracao">Administração do aplicativo</label>
         
         <div class="preencher">
-          <input id="inpUsuario" type="text" class="form-control" placeholder="Usuário" maxlength="20" required>
-          <input id="inpSenha" type="password" class="form-control" placeholder="Senha" maxlength="20" required>
-          <button id="btnEntrar" ion-button color="success" ion-button full style="text-align:center;" (click)="goHome()">Entrar</button>
+          <input id="inpUsuario" type="text" [(ngModel)]="login.email"class="form-control" placeholder="Usuário" maxlength="20" required>
+          <input id="inpSenha" type="password" [(ngModel)]="login.senha" class="form-control" placeholder="Senha" maxlength="20" required>
+          <button id="btnEntrar" ion-button color="success" ion-button full style="text-align:center;" (click)="fazerLogin()">Entrar</button>
         </div>
     </div>
   </div>
