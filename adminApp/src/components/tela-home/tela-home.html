@@ -1,25 +1,25 @@
   <div class="sessoes">
     <div class="cima">
-      <div id="boxPlacarOnline" class="box" (click)="openCadastroPartidas()">
+      <div id="boxPlacarOnline" class="box" (click)="openPage(placarOnline)">
         <img id="imgPlacarOnline" src="../assets/imgs/placar-online.svg">
-        <label id="lblPlacarOnline" type="text">Partidas</label>
+        <label id="lblPlacarOnline" type="text">Placar</label>
       </div>
             
-      <div id="boxMarketplace" class="box" (click)="indisponivel()">
-        <img id="imgMarketplace" src="../assets/imgs/marketplace.svg">
-        <label id="lblMarketplace" type="text">Marketplace</label>
+      <div id="boxMarketplace" class="box" (click)="openPage(listaPartidas)">
+        <img id="imgMarketplace" src="../../assets/imgs/checklist.png">
+        <label id="lblMarketplace" type="text">Lista de partidas</label>
       </div>
     </div>
 
     <div class="baixo">
-      <div id="boxLojaDaTorcida" class="box" (click)="indisponivel()">
-        <img id="imgLojaDaTorcida" src="../assets/imgs/loja-da-torcida.svg">
-        <label id="lblLojaDaTorcida" type="text">Loja da Torcida</label>
+      <div id="boxLojaDaTorcida" class="box" (click)="openPage(cadastrar)">
+        <img id="imgLojaDaTorcida" src="../../assets/imgs/match.png">
+        <label id="lblLojaDaTorcida" type="text">Criar Partida</label>
       </div>
             
-      <div id="boxMinhaConta" class="box" (click)="indisponivel()">
-        <img id="imgMinhaConta" src="../assets/imgs/minha-conta.svg">
-        <label id="lblMinhaConta" type="text">Minha Conta</label>
+      <div id="boxMinhaConta" class="box" (click)="openPage(convenios)">
+        <img id="imgMinhaConta" src="../../assets/imgs/marketplace.svg">
+        <label id="lblMinhaConta" type="text">Convênios</label>
       </div>
     </div>
 
