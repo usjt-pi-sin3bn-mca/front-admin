@@ -11,8 +11,8 @@ import { LoginProvider } from '../../providers/login/login';
  * Components.
  */
 @Component({
-  selector: 'form-login',
-  templateUrl: 'form-login.html'
+  selector: 'login-screen',
+  templateUrl: 'login-screen.html'
 })
 export class LoginScreenComponent {
 

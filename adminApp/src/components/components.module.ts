@@ -7,7 +7,8 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral';
 import { PlacarOnlineComponent } from './placar-online/placar-online';
 import { ConveniosComponent } from './convenios/convenios';
 @NgModule({
-	declarations: [FormLoginComponent,
+	declarations: [
+        // FormLoginComponent,
     TelaHomeComponent,
     LoginScreenComponent,
     CadastroPartidasComponent,
@@ -15,7 +16,8 @@ import { ConveniosComponent } from './convenios/convenios';
     PlacarOnlineComponent,
     ConveniosComponent],
 	imports: [],
-	exports: [FormLoginComponent,
+	exports: [
+        // FormLoginComponent,
     TelaHomeComponent,
     LoginScreenComponent,
     CadastroPartidasComponent,

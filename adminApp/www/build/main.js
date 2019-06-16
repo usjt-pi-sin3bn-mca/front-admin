@@ -1,13 +1,13 @@
 webpackJsonp([12],{
 
-/***/ 111:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroExperienciaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_experiencia_experiencia__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_experiencia_experiencia__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__lista_experiencia_lista_experiencia__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -123,7 +123,7 @@ var CadastroExperienciaPage = (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -168,7 +168,7 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 125:
+/***/ 124:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -181,20 +181,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 125;
+webpackEmptyAsyncContext.id = 124;
 
 /***/ }),
 
-/***/ 166:
+/***/ 165:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/cadastrar-partida/cadastrar-partida.module": [
-		303,
+		304,
 		11
 	],
 	"../pages/cadastro-convenio/cadastro-convenio.module": [
-		304,
+		303,
 		10
 	],
 	"../pages/cadastro-experiencia/cadastro-experiencia.module": [
@@ -202,39 +202,39 @@ var map = {
 		9
 	],
 	"../pages/cadastro/cadastro.module": [
-		312,
+		306,
 		8
 	],
 	"../pages/lista-convenio/lista-convenio.module": [
-		306,
+		307,
 		7
 	],
 	"../pages/lista-experiencia/lista-experiencia.module": [
-		307,
+		308,
 		6
 	],
 	"../pages/lista-partidas/lista-partidas.module": [
-		308,
+		309,
 		5
 	],
 	"../pages/login/login.module": [
-		309,
+		310,
 		4
 	],
 	"../pages/marketplace/marketplace.module": [
-		314,
+		311,
 		0
 	],
 	"../pages/placar-online/placar-online.module": [
-		310,
+		312,
 		3
 	],
 	"../pages/placar/placar.module": [
-		311,
+		313,
 		2
 	],
 	"../pages/test/test.module": [
-		313,
+		314,
 		1
 	]
 };
@@ -249,8 +249,82 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 166;
+webpackAsyncContext.id = 165;
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 166:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExperienciaProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the ExperienciaProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ExperienciaProvider = (function () {
+    function ExperienciaProvider(http, toastController) {
+        this.http = http;
+        this.toastController = toastController;
+        this.baseApiPath = 'http://rock.lucasduarte.club/maestro/api/';
+    }
+    ExperienciaProvider.prototype.cadastrarExperiencia = function (body) {
+        var _this = this;
+        return new Promise(function (result) {
+            _this.http.post(_this.baseApiPath + 'experiencia', body, {
+                headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('Content-Type', 'application/json')
+            })
+                .subscribe(function (data) {
+                console.log(data);
+            }, function (error) {
+                console.log(error);
+            });
+        });
+    };
+    ExperienciaProvider.prototype.getExperiencia = function () {
+        var _this = this;
+        var url = this.baseApiPath + 'experiencia';
+        if (this.data) {
+            return Promise.resolve(this.data);
+        }
+        return new Promise(function (resolve) {
+            _this.http
+                .get(url)
+                .map(function (res) { return res; })
+                .subscribe(function (data) {
+                _this.data = data;
+                resolve(_this.data);
+            }, function (error) {
+                console.log("Erro no provider Experiencia");
+            });
+        });
+    };
+    ExperienciaProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]])
+    ], ExperienciaProvider);
+    return ExperienciaProvider;
+}());
+
+//# sourceMappingURL=experiencia.js.map
 
 /***/ }),
 
@@ -403,51 +477,6 @@ var LoginProvider = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacarPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the PlacarPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var PlacarPage = (function () {
-    function PlacarPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    PlacarPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PlacarPage');
-    };
-    PlacarPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-placar',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\placar\placar.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-title>Placar</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content>\n\n    <menu-lateral></menu-lateral>\n\n    <placar-online></placar-online>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\placar\placar.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], PlacarPage);
-    return PlacarPage;
-}());
-
-//# sourceMappingURL=placar.js.map
-
-/***/ }),
-
-/***/ 214:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
@@ -486,6 +515,51 @@ var CadastroPage = (function () {
 }());
 
 //# sourceMappingURL=cadastro.js.map
+
+/***/ }),
+
+/***/ 214:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacarPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the PlacarPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PlacarPage = (function () {
+    function PlacarPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    PlacarPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PlacarPage');
+    };
+    PlacarPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-placar',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\placar\placar.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-title>Placar</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content>\n\n    <menu-lateral></menu-lateral>\n\n    <placar-online></placar-online>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\placar\placar.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], PlacarPage);
+    return PlacarPage;
+}());
+
+//# sourceMappingURL=placar.js.map
 
 /***/ }),
 
@@ -559,12 +633,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_cadastro_cadastro__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_placar_placar__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_test_test__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_tela_home_tela_home__ = __webpack_require__(295);
@@ -572,18 +646,18 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_cadastro_partidas_cadastro_partidas__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_menu_lateral_menu_lateral__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_placar_online_placar_online__ = __webpack_require__(300);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_login_login__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_login_login__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_provider_partidas_provider_partidas__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_lista_partidas_lista_partidas__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_placar_online_placar_online__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_convenio_convenio__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_experiencia_experiencia__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_experiencia_experiencia__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_user_user__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cadastro_convenio_cadastro_convenio__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_convenios_convenios__ = __webpack_require__(302);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_lista_convenio_lista_convenio__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_lista_experiencia_lista_experiencia__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_cadastro_experiencia_cadastro_experiencia__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_cadastro_experiencia_cadastro_experiencia__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_login_login__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -654,18 +728,18 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/cadastrar-partida/cadastrar-partida.module#CadastrarPartidaPageModule', name: 'CadastrarPartidaPage', segment: 'cadastrar-partida', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cadastro-convenio/cadastro-convenio.module#CadastroConvenioPageModule', name: 'CadastroConvenioPage', segment: 'cadastro-convenio', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cadastrar-partida/cadastrar-partida.module#CadastrarPartidaPageModule', name: 'CadastrarPartidaPage', segment: 'cadastrar-partida', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cadastro-experiencia/cadastro-experiencia.module#CadastroExperienciaPageModule', name: 'CadastroExperienciaPage', segment: 'cadastro-experiencia', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/lista-convenio/lista-convenio.module#ListaConvenioPageModule', name: 'ListaConvenioPage', segment: 'lista-convenio', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/lista-experiencia/lista-experiencia.module#ListaExperienciaPageModule', name: 'ListaExperienciaPage', segment: 'lista-experiencia', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/lista-partidas/lista-partidas.module#ListaPartidasPageModule', name: 'ListaPartidasPage', segment: 'lista-partidas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/marketplace/marketplace.module#MarketplacePageModule', name: 'MarketplacePage', segment: 'marketplace', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/placar-online/placar-online.module#PlacarOnlinePageModule', name: 'PlacarOnlinePage', segment: 'placar-online', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/placar/placar.module#PlacarPageModule', name: 'PlacarPage', segment: 'placar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/marketplace/marketplace.module#MarketplacePageModule', name: 'MarketplacePage', segment: 'marketplace', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_9__angular_common_http__["b" /* HttpClientModule */],
@@ -724,7 +798,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_cadastrar_partida_cadastrar_partida__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_lista_partidas_lista_partidas__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_placar_online_placar_online__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_lista_convenio_lista_convenio__ = __webpack_require__(56);
@@ -1031,8 +1105,7 @@ var LoginScreenComponent = (function () {
     };
     LoginScreenComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'form-login',
-            templateUrl: 'form-login.html'
+            selector: 'login-screen',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\login-screen\login-screen.html"*/'<div>\n\n  <div class="coluna-esquerda">\n\n    <img id="imgTime" src="../assets/imgs/time-usjt.jpeg">\n\n  </div>\n\n\n\n  <div class="coluna-direita">\n\n    <div class="form-login">\n\n      <img id="imgLogo" src="../assets/imgs/logo-usjt.png">\n\n        <label id="lblAdministracao">Administração do aplicativo</label>\n\n        \n\n        <div class="preencher">\n\n          <input id="inpUsuario" type="text" [(ngModel)]="login.email"class="form-control" placeholder="Usuário" maxlength="20" required>\n\n          <input id="inpSenha" type="password" [(ngModel)]="login.senha" class="form-control" placeholder="Senha" maxlength="20" required>\n\n          <button id="btnEntrar" ion-button color="success" ion-button full style="text-align:center;" (click)="fazerLogin()">Entrar</button>\n\n        </div>\n\n    </div>\n\n  </div>\n\n</div>'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\components\login-screen\login-screen.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__providers_login_login__["a" /* LoginProvider */]])
     ], LoginScreenComponent);
@@ -1931,8 +2004,8 @@ var ListaConvenioPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaExperienciaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cadastro_experiencia_cadastro_experiencia__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_experiencia_experiencia__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cadastro_experiencia_cadastro_experiencia__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_experiencia_experiencia__ = __webpack_require__(166);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2178,80 +2251,6 @@ var PlacarOnlinePage = (function () {
 }());
 
 //# sourceMappingURL=placar-online.js.map
-
-/***/ }),
-
-/***/ 88:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExperienciaProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/*
-  Generated class for the ExperienciaProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var ExperienciaProvider = (function () {
-    function ExperienciaProvider(http, toastController) {
-        this.http = http;
-        this.toastController = toastController;
-        this.baseApiPath = 'http://rock.lucasduarte.club/maestro/api/';
-    }
-    ExperienciaProvider.prototype.cadastrarExperiencia = function (body) {
-        var _this = this;
-        return new Promise(function (result) {
-            _this.http.post(_this.baseApiPath + 'experiencia', body, {
-                headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('Content-Type', 'application/json')
-            })
-                .subscribe(function (data) {
-                console.log(data);
-            }, function (error) {
-                console.log(error);
-            });
-        });
-    };
-    ExperienciaProvider.prototype.getExperiencia = function () {
-        var _this = this;
-        var url = this.baseApiPath + 'experiencia';
-        if (this.data) {
-            return Promise.resolve(this.data);
-        }
-        return new Promise(function (resolve) {
-            _this.http
-                .get(url)
-                .map(function (res) { return res; })
-                .subscribe(function (data) {
-                _this.data = data;
-                resolve(_this.data);
-            }, function (error) {
-                console.log("Erro no provider Experiencia");
-            });
-        });
-    };
-    ExperienciaProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]])
-    ], ExperienciaProvider);
-    return ExperienciaProvider;
-}());
-
-//# sourceMappingURL=experiencia.js.map
 
 /***/ })
 
