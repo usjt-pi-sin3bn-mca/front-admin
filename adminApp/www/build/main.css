@@ -26773,6 +26773,203 @@ tela-home .sessoes .baixo #boxLojaDaTorcida, tela-home .sessoes .baixo #boxMinha
   margin-bottom: 50px;
 }
 
+page-cadastro-convenio .central {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 25px #b2bec3;
+  box-shadow: 0px 5px 25px #b2bec3;
+  padding: 20px;
+  margin: 50px;
+  margin-left: 25%;
+}
+
+page-cadastro-convenio p {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+}
+
+page-cadastro-convenio input {
+  border-width: 0;
+  border-style: initial;
+  border-color: initial;
+  -o-border-image: initial;
+  border-image: initial;
+}
+
+page-cadastro-convenio .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-cadastro-convenio .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+page-cadastro-convenio .titulo-cadastro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 51px;
+  display: flex;
+  font-weight: bold;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+page-cadastro-convenio .titulo-cadastro .icone-convenio {
+  width: 71px;
+  height: 71px;
+}
+
+page-cadastro-convenio .titulo-cadastro .titulo-partida {
+  margin: 20px;
+  width: 250px;
+  height: 71x;
+  font-size: 23px;
+  font-weight: bold;
+  color: #4577b1;
+}
+
+page-cadastro-convenio .cadastro-de-convenios {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0f558b;
+  margin-top: 10px;
+}
+
+page-cadastro-convenio .convenios {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0f558b;
+  margin-top: 15px;
+}
+
+page-cadastro-convenio .convenio-info-input {
+  border-radius: 20px;
+  margin: 5px;
+  padding: 8px;
+  width: 300px;
+  background-color: #f8f8f8;
+}
+
+page-cadastro-convenio .convenio-info-input::-webkit-input-placeholder, page-cadastro-convenio .convenio-info-input::-webkit-input-placeholder, page-cadastro-convenio .convenio-info-input::-moz-placeholder,
+page-cadastro-convenio .convenio-info-input:-ms-input-placeholder, page-cadastro-convenio .convenio-info-input:-moz-placeholder {
+  color: #9d9d9d;
+}
+
+page-cadastro-convenio .convenio-info-input::placeholder, page-cadastro-convenio .convenio-info-input::-webkit-input-placeholder, page-cadastro-convenio .convenio-info-input::-moz-placeholder,
+page-cadastro-convenio .convenio-info-input:-ms-input-placeholder, page-cadastro-convenio .convenio-info-input:-moz-placeholder {
+  color: #9d9d9d;
+}
+
+page-cadastro-convenio .convenio-descricao {
+  border-radius: 20px;
+  margin: 5px;
+  padding: 8px;
+  width: 300px;
+  height: 100px;
+  background-color: #f8f8f8;
+}
+
+page-cadastro-convenio .position-botao {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+page-cadastro-convenio .position-botao .botao-cadastrar {
+  width: 181px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: #b2d16f;
+}
+
+page-cadastro-convenio .position-botao .cadastrar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 17px;
+  color: #ffffff;
+}
+
 page-home {
   padding: 0;
 }

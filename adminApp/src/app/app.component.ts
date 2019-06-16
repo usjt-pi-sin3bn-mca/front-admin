@@ -8,6 +8,10 @@ import { CadastrarPartidaPage } from '../pages/cadastrar-partida/cadastrar-parti
 import { LoginPage } from '../pages/login/login';
 import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
 import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
+import { CadastroConvenioPage } from '../pages/cadastro-convenio/cadastro-convenio';
+import { ListaConvenioPage } from '../pages/lista-convenio/lista-convenio';
+import { CadastroExperienciaPage } from '../pages/cadastro-experiencia/cadastro-experiencia';
+import { ListaExperienciaPage } from '../pages/lista-experiencia/lista-experiencia';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +31,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Cadastrar Partida', component: CadastrarPartidaPage },
       { title: 'Lista de partidas', component: ListaPartidasPage },
+      { title: 'Convênio', component: ListaConvenioPage },
+      { title: 'Experiencia', component: ListaExperienciaPage },
       { title: 'Administrar placar', component: PlacarOnlinePage }
     ];
 

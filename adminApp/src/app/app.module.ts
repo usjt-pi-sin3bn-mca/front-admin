@@ -24,6 +24,15 @@ import { LoginPage } from '../pages/login/login';
 import { ProviderPartidasProvider } from '../providers/provider-partidas/provider-partidas';
 import { ListaPartidasPage } from '../pages/lista-partidas/lista-partidas';
 import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
+import { ConvenioProvider } from '../providers/convenio/convenio';
+import { ExperienciaProvider } from '../providers/experiencia/experiencia';
+import { UserProvider } from '../providers/user/user';
+import { CadastroConvenioPage } from '../pages/cadastro-convenio/cadastro-convenio';
+import { ConveniosComponent } from '../components/convenios/convenios';
+import { ListaConvenioPage } from '../pages/lista-convenio/lista-convenio';
+import { ListaExperienciaPage } from '../pages/lista-experiencia/lista-experiencia';
+import { CadastroExperienciaPage } from '../pages/cadastro-experiencia/cadastro-experiencia';
+import { LoginProvider } from '../providers/login/login';
 
 @NgModule({
   declarations: [
@@ -34,6 +43,7 @@ import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
     PlacarPage,
     ListaPartidasPage,
     CadastrarPartidaPage,
+    CadastroConvenioPage,
     TestPage,
     TelaHomeComponent,
     LoginPage,
@@ -41,7 +51,11 @@ import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
     CadastroPartidasComponent,
     MenuLateralComponent,
     PlacarOnlineComponent,
-    PlacarOnlinePage
+    PlacarOnlinePage,
+    ConveniosComponent,
+    ListaConvenioPage,
+    ListaExperienciaPage,
+    CadastroExperienciaPage
   ],
   imports: [
     BrowserModule,
@@ -65,13 +79,22 @@ import { PlacarOnlinePage } from '../pages/placar-online/placar-online';
     LoginScreenComponent,
     CadastroPartidasComponent,
     MenuLateralComponent,
-    PlacarOnlineComponent
+    PlacarOnlineComponent,
+    CadastroConvenioPage,
+    ConveniosComponent,
+    ListaConvenioPage,
+    ListaExperienciaPage,
+    CadastroExperienciaPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProviderPartidasProvider
+    ProviderPartidasProvider,
+    ConvenioProvider,
+    ExperienciaProvider,
+    UserProvider,
+    LoginProvider
   ]
 })
 export class AppModule {}
