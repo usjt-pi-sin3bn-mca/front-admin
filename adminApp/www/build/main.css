@@ -26420,7 +26420,7 @@ placar-online {
   background-color: #f4f4f4;
   width: calc(100% - 300px);
   margin-left: 300px !important;
-  position: fixed;
+  position: absolute;
 }
 
 placar-online p {
@@ -26611,8 +26611,7 @@ placar-online .acoes-partida {
   background-color: #dee9f5;
   width: 100%;
   margin-bottom: 20px;
-  margin-left: -20px;
-  padding: 10px;
+  padding: 10px 40px;
 }
 
 placar-online .acoes-partida .position-titulo-acoes {
@@ -26781,6 +26780,7 @@ placar-online .sets-ativo-pai {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-right: 80px;
   width: 100%;
 }
 
@@ -26896,6 +26896,10 @@ placar-online .posse-bola-titulo .botao-posse-desativada {
   height: 28px;
   border-radius: 20px;
   background-color: #d7d7d7;
+}
+
+tela-home img {
+  width: 30%;
 }
 
 tela-home .sessoes {

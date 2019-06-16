@@ -77,6 +77,7 @@ export class PlacarOnlineComponent {
   verificarId(id) {
     if (id > 0) {
       this.conteudoAtivo = true;
+      this.getSets();
     }
     else {
       alert("Número inválido");

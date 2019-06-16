@@ -10,7 +10,7 @@
     <p class="flex">PLACAR EM TEMPO REAL</p>
   </div>
 
-  <div class="area">
+  <div class="area" *ngIf="!conteudoAtivo">
     <ion-item>
         <ion-label stacked>ID da partida</ion-label>
         <ion-input type="number" required [(ngModel)]="idPartidaAtual" name="idPartidaAtual"></ion-input>

@@ -8,6 +8,7 @@ import { PlacarOnlineComponent } from './placar-online/placar-online';
 import { ConveniosComponent } from './convenios/convenios';
 @NgModule({
 	declarations: [
+
     TelaHomeComponent,
     LoginScreenComponent,
     CadastroPartidasComponent,
