@@ -33,7 +33,6 @@ export class PlacarOnlineComponent {
 
   getSets() {
     let url = this.baseApiPath + 'setPartida/?partidaId=' + this.idPartidaAtual;
-
     if (this.data) {
       return Promise.resolve(this.data);
     }
