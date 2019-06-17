@@ -60,7 +60,7 @@
           </div>
         </div> -->
       
-        <div id="set-numero-{{i+1}}" class="set-item" *ngFor="let item of sets; let i = index">
+        <div id="set-numero-{{i}}" class="set-item" [class.inactive]="sets[i].setFinalizado" *ngFor="let item of sets; let i = index">
           <div class="sets-position">
             <p class="flex sets">SET {{i+1}}</p>
           </div>
@@ -76,7 +76,7 @@
             </div>
         
             <div class="position-time2-info">
-              <p class="flex time-info">Time 04</p>
+              <p class="flex time-info">Adversário</p>
               <div class="flex flex-row position-placar-botao">
                 <button class="botao-menos" (click)="diminuirPontoAdversario(i)">-</button>
                 <p class="flex pontos">{{item.pontoB}}</p>
@@ -87,7 +87,7 @@
         
             <div class="position-botao-sets">
               <p class="finalizado-msg">Set Finalizado</p>
-              <button class="botao-atualizar-set" (click)="adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">
+              <button class="botao-atualizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario); adicionarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario);">
                 <p class="botao-fonte">Avançar set</p>
               </button>
               <button class="botao-finalizar-set" (click)="finalizarSet(i, item.pontoSetAtualSJ, item.pontoSetAtualAdversario)">

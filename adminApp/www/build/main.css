@@ -25764,7 +25764,6 @@ cadastro-partidas .central {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 800px;
-  height: 600px;
   background-color: white;
   -webkit-box-shadow: 0px 5px 25px #b2bec3;
   box-shadow: 0px 5px 25px #b2bec3;
@@ -25972,7 +25971,7 @@ cadastro-partidas .position-botao {
   -ms-flex-pack: end;
   justify-content: flex-end;
   width: 100%;
-  margin-bottom: 10px;
+  margin: 50px 0;
 }
 
 cadastro-partidas .position-botao .botao-avancar {
@@ -26826,6 +26825,11 @@ placar-online .sets-ativo-pai .pontos {
   font-size: 66px;
   font-weight: bold;
   color: #000000;
+  width: 78px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 placar-online .position-botao-sets {

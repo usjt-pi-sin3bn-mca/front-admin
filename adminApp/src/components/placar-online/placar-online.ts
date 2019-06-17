@@ -68,10 +68,8 @@ export class PlacarOnlineComponent {
         "id": this.idPartidaAtual
       }
      };
-    // console.log("zerado", setZerado);
     this._partidasProvider.criarSet(setZerado);
     this.getSets();
-
   }
 
   verificarId(id) {
@@ -94,9 +92,11 @@ export class PlacarOnlineComponent {
     var element = document.getElementById("set-numero-" + id);
     element.classList.add("inactive");
     this.sets[id].setFinalizado = "true";
+    this.sendRequest(id);
   }
 
   finalizarPartida() {
+    //this._partidasProvider.finalizarPartida(this.idPartidaAtual);
     alert("A Partida foi finalizada com sucesso.");
     this.navCtrl.setRoot(HomePage);
   }
