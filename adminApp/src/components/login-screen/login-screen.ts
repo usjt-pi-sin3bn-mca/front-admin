@@ -37,18 +37,18 @@ export class LoginScreenComponent {
     toast.present();
   }
   fazerLogin() {
-    
-    this._loginProvider.loginUsuario(this.login); 
+    this.navCtrl.setRoot(HomePage);
+    // this._loginProvider.loginUsuario(this.login); 
 
-    setTimeout(() =>{
-      console.log("Teste", UsuarioLogado.getInstance().getUsuario());
-      if(UsuarioLogado.getInstance().getUsuario()!= null){
-        this.navCtrl.setRoot(HomePage);
-      }
-      else{
-          this.erro();
-      }
-    }, 2000);
+    // setTimeout(() =>{
+    //   console.log("Teste", UsuarioLogado.getInstance().getUsuario());
+    //   if(UsuarioLogado.getInstance().getUsuario()!= null){
+    //     this.navCtrl.setRoot(HomePage);
+    //   }
+    //   else{
+    //       this.erro();
+    //   }
+    // }, 2000);
     
   }
    
