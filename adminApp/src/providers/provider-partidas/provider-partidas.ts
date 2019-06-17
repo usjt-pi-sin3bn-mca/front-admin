@@ -123,4 +123,26 @@ export class ProviderPartidasProvider {
       });
     });
   }
+
+  finalizarPartida(id) {
+    let url = this.baseApiPath + 'set/partidas/finalizar/' + id;
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    headers.append('Access-Control-Allow-Origin', '*');
+
+    return new Promise((resolve, reject) => {
+      this.http.put(url, headers)
+      .toPromise()
+      .then((response) =>
+      {
+        console.log('API SET ATUALIZOU Response : ', response.json());
+        resolve(response.json());
+      })
+      .catch((error) =>
+      {
+        console.error('API SET ATUALIZOU Error : ', error.status);
+        console.error('API SET Error : ', JSON.stringify(error));
+        reject(error.json());
+      });
+    });
+  }
 }

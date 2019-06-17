@@ -22,6 +22,7 @@ import { ConveniosComponent } from './convenios/convenios';
     CadastroPartidasComponent,
     MenuLateralComponent,
     PlacarOnlineComponent,
-    ConveniosComponent]
+    ConveniosComponent
+    ]
 })
 export class ComponentsModule {}

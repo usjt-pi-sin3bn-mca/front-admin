@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { NavController } from 'ionic-angular';
 import { ProviderPartidasProvider } from '../../providers/provider-partidas/provider-partidas';
+import { HomePage } from '../../pages/home/home';
 
 /**
  * Generated class for the CadastroPartidasComponent component.
@@ -83,9 +84,10 @@ export class CadastroPartidasComponent {
   }
 
   sendRequest() {
-    //this._providerPartidas.criarPartida(this.bodyRequest);
+    this._providerPartidas.criarPartida(this.bodyRequest);
     console.log("Request feito", this.bodyRequest);
-    this.partidaEmAndamento = true;
+    alert("Partida criada com sucesso!");
+    this.navCtrl.setRoot(HomePage);
   }
 
 }
