@@ -11,7 +11,8 @@ import { ToastController } from 'ionic-angular';
 @Injectable()
 export class ConvenioProvider  {
   // private baseApiPath = 'http://rock.lucasduarte.club/maestro/api/';
-  private baseApiPath = 'http://maestro.lucasduarte.club/api/';
+ // private baseApiPath = 'https://maestro.lucasduarte.club/api/';
+ private baseApiPath = 'http://localhost:8080/api/';
   public apiResult: any;
  
   data: any;
@@ -23,10 +24,6 @@ export class ConvenioProvider  {
   }
   getAllConvenios() {
     let url = this.baseApiPath + 'convenio';
-
-    if (this.data) {
-      return Promise.resolve(this.data);
-    }
 
     return new Promise(resolve => {
       this.http

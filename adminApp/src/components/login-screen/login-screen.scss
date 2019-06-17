@@ -12,7 +12,13 @@ login-screen {
             width: calc(100% - 300px);
         }
     }
-  
+    ion-list {
+        background-color: transparent !important;
+    }
+    .item-list{
+        background: transparent;
+    }
+    
     .coluna-direita {
         display: flex;
         align-items: center;

@@ -38,10 +38,6 @@ export class ExperienciaProvider  {
   getExperiencia() {
     let url = this.baseApiPath + 'experiencia';
 
-    if (this.data) {
-      return Promise.resolve(this.data);
-    }
-
     return new Promise(resolve => {
       this.http
         .get(url)

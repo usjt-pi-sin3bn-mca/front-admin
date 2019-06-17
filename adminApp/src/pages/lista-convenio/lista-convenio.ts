@@ -22,12 +22,16 @@ export class ListaConvenioPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public _convenios: ConvenioProvider) {
     this.showAll();
     
+    
   }
 
   ionViewDidLoad() {
     this.showAll()
   }
-
+  ionViewWillEnter(){
+ 
+    console.log("Passou aqui");
+  }
   async showAll() {
     
     this.lista = await this._convenios.getAllConvenios();
@@ -42,5 +46,7 @@ export class ListaConvenioPage {
   detalhesConvenio(convenio){
     this.navCtrl.push(CadastroConvenioPage,{convnioSelecionado: convenio});
   }
+
+
 }
 

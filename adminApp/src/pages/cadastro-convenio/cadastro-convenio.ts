@@ -38,16 +38,25 @@ export class CadastroConvenioPage {
   }
 
   cadastrarConvenio(){
-    this._providerCovenio.cadastrarConvenio(this.convenio);
-    this.navCtrl.setRoot(ListaConvenioPage);
+    setTimeout(() =>{
+      this._providerCovenio.cadastrarConvenio(this.convenio);
+     this.navCtrl.setRoot(ListaConvenioPage);
+    }, 2000);
+    
   }
   alterarConvenio(){
-    this._providerCovenio.alterarConvenio(this.convenio.id,this.convenio);
-    this.navCtrl.setRoot(ListaConvenioPage);
+    setTimeout(() =>{
+      this._providerCovenio.alterarConvenio(this.convenio.id,this.convenio);
+      this.navCtrl.setRoot(ListaConvenioPage);
+    }, 2000);
+   
   }
   excluirConvenio(){
-    this._providerCovenio.deletarConvenio(this.convenio.id);
-    this.navCtrl.setRoot(ListaConvenioPage);
+    setTimeout(() =>{
+      this._providerCovenio.deletarConvenio(this.convenio.id);
+      this.navCtrl.setRoot(ListaConvenioPage);
+    }, 5000);
+  
   }
 
 }

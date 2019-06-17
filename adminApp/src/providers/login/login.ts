@@ -13,7 +13,7 @@ import { UsuarioLogado } from '../../model/UsuarioLogado';
 @Injectable()
 export class LoginProvider {
   // private baseApiPath = 'http://rock.lucasduarte.club/api/login';
-  private baseApiPath = 'http://maestro.lucasduarte.club/api/torcedor/logar';
+  private baseApiPath = 'http://maestro.lucasduarte.club/api/torcedor/logar/';
   public apiResult: any;
   id: any = {
     id: ""

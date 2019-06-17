@@ -26240,6 +26240,14 @@ login-screen .coluna-esquerda #imgTime {
   width: calc(100% - 300px);
 }
 
+login-screen ion-list {
+  background-color: transparent !important;
+}
+
+login-screen .item-list {
+  background: transparent;
+}
+
 login-screen .coluna-direita {
   display: -webkit-box;
   display: -webkit-flex;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioLogado } from '../../model/UsuarioLogado';
 
 /**
  * Generated class for the MenuLateralComponent component.
@@ -11,12 +12,15 @@ import { Component } from '@angular/core';
   templateUrl: 'menu-lateral.html'
 })
 export class MenuLateralComponent {
-
+  email : any = "adm@usjt.com";
+  nome  : any = "Administrador"; 
   text: string;
-
+  
   constructor() {
-    console.log('Hello MenuLateralComponent Component');
+    
     this.text = 'Hello World';
+    
+    
   }
 
 }

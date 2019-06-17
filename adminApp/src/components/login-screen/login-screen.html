@@ -6,13 +6,30 @@
   <div class="coluna-direita">
     <div class="form-login">
       <img id="imgLogo" src="../assets/imgs/logo-usjt.png">
-        <label id="lblAdministracao">Administração do aplicativo</label>
-        
-        <div class="preencher">
-          <input id="inpUsuario" type="text" class="form-control" placeholder="Usuário" maxlength="20" required>
-          <input id="inpSenha" type="password" class="form-control" placeholder="Senha" maxlength="20" required>
-          <button id="btnEntrar" ion-button color="success" ion-button full style="text-align:center;" (click)="goHome()">Entrar</button>
-        </div>
+      <label id="lblAdministracao">Administração do aplicativo</label>
+
+      <div class="preencher">
+        <ion-list>
+
+          <ion-item no-lines class="item-list">
+            <div text-center>
+              <input id="inpUsuario" type="text" [(ngModel)]="login.email" name="email" style="min-width:80%;"
+                placeholder="Digite seu email.">
+            </div>
+          </ion-item>
+
+          <ion-item no-lines class="item-list">
+            <div text-center>
+              <input id="inpSenha" type="password" [(ngModel)]="login.senha" name="password" style="min-width: 80%;"
+                placeholder="Digite sua senha.">
+            </div>
+          </ion-item>
+          <button id="btnEntrar" (click)="fazerLogin()" ion-button color="dark" ion-button full
+            style="text-align:center;">ACESSAR</button>
+      
+
+        </ion-list>
+      </div>
     </div>
   </div>
 </div>
