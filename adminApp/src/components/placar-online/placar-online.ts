@@ -128,5 +128,4 @@ export class PlacarOnlineComponent {
     this.sets[$param].pontoB = this.sets[$param].pontoB-1;
     this.sendRequest($param);
   }
-
 }
