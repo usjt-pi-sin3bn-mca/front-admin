@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { UsuarioLogado } from '../../model/UsuarioLogado';
+import { NavController } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home';
 
 /**
  * Generated class for the MenuLateralComponent component.
@@ -16,11 +18,12 @@ export class MenuLateralComponent {
   nome  : any = "Administrador"; 
   text: string;
   
-  constructor() {
+  constructor(public navCtrl: NavController) {}
+
+
     
-    this.text = 'Hello World';
-    
-    
+  irHome() {
+    this.navCtrl.setRoot(HomePage);
   }
 
 }
