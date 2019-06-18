@@ -1646,8 +1646,7 @@ var ConvenioProvider = (function () {
         this.http = http;
         this.toastController = toastController;
         // private baseApiPath = 'http://rock.lucasduarte.club/maestro/api/';
-        // private baseApiPath = 'https://maestro.lucasduarte.club/api/';
-        this.baseApiPath = 'http://localhost:8080/api/';
+        this.baseApiPath = 'https://maestro.lucasduarte.club/api/';
     }
     ConvenioProvider.prototype.getAllConvenios = function () {
         var _this = this;
@@ -1729,9 +1728,10 @@ var ConvenioProvider = (function () {
     };
     ConvenioProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]) === "function" && _b || Object])
     ], ConvenioProvider);
     return ConvenioProvider;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=convenio.js.map
@@ -1956,7 +1956,7 @@ var CadastroConvenioPage = (function () {
     };
     CadastroConvenioPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cadastro-convenio',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\cadastro-convenio\cadastro-convenio.html"*/'<!--\n\n  Generated template for the CadastroConvenioPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      <ion-title>cadastro-convenio</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  <ion-content>\n\n        <menu-lateral></menu-lateral>\n\n  <div class="central">\n\n    <!-- <div class="titulo-cadastro">\n\n        <img src="../../assets/imgs/marketplace.svg" class="icone-convenio">\n\n        <div>\n\n          <p class="titulo-partida">MARKETPLACE</p>\n\n        </div>\n\n    </div> -->\n\n\n\n    <div class="cadastro-de-convenios">\n\n        <p class="flex">Cadastro de Convêncio</p>\n\n    </div>\n\n\n\n    <div class="convenios">\n\n        <p class="flex">Convêncios</p>\n\n      </div>\n\n\n\n      <form class="flex flex-column" id="usrform">\n\n          <input type="text" [(ngModel)]="convenio.nome" name="nome" placeholder="Nome do convênio" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.nomeReponsavel" name="nomeReponsavel" placeholder="Nome do Responsavel" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.cpf" name="cpf"  placeholder="CPF" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.fone" name="fone" placeholder="Telefone" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.email" name="E-mail" placeholder="E-mail" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.endereco" name="Endereco" placeholder="Endereço" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.pontuacaoQRCode" name="Pontuacao" placeholder="Pontuação QRCode" class="convenio-info-input">\n\n\n\n      </form>\n\n      <div class="position-botao">\n\n          <div  *ngIf="!existente" >\n\n            <button class="botao-cadastrar" (click)="cadastrarConvenio()"><p class="cadastrar">Avançar</p></button>\n\n          </div>\n\n            <div  *ngIf="existente" >\n\n            <button (click)="alterarConvenio()" ion-button>Alterar</button>\n\n            <button (click)="excluirConvenio()" ion-button color="danger">Excluir</button>\n\n         </div>\n\n      </div>\n\n\n\n</div>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\cadastro-convenio\cadastro-convenio.html"*/,
+            selector: 'page-cadastro-convenio',template:/*ion-inline-start:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\cadastro-convenio\cadastro-convenio.html"*/'<!--\n\n  Generated template for the CadastroConvenioPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n      <ion-title>Cadastro de Convênios</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  <ion-content>\n\n        <menu-lateral></menu-lateral>\n\n  <div class="central">\n\n    <!-- <div class="titulo-cadastro">\n\n        <img src="../../assets/imgs/marketplace.svg" class="icone-convenio">\n\n        <div>\n\n          <p class="titulo-partida">MARKETPLACE</p>\n\n        </div>\n\n    </div> -->\n\n\n\n    <div class="cadastro-de-convenios">\n\n        <p class="flex">Cadastro de Convênios</p>\n\n    </div>\n\n\n\n    <div class="convenios">\n\n        <p class="flex">Convênios</p>\n\n      </div>\n\n\n\n      <form class="flex flex-column" id="usrform">\n\n          <input type="text" [(ngModel)]="convenio.nome" name="nome" placeholder="Nome do convênio" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.nomeReponsavel" name="nomeReponsavel" placeholder="Nome do Responsavel" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.cpf" name="cpf"  placeholder="CPF" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.fone" name="fone" placeholder="Telefone" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.email" name="E-mail" placeholder="E-mail" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.endereco" name="Endereco" placeholder="Endereço" class="convenio-info-input">\n\n          <input type="text" [(ngModel)]="convenio.pontuacaoQRCode" name="Pontuacao" placeholder="Pontuação QRCode" class="convenio-info-input">\n\n\n\n      </form>\n\n      <div class="position-botao">\n\n          <div  *ngIf="!existente" >\n\n            <button class="botao-cadastrar" (click)="cadastrarConvenio()"><p class="cadastrar">Avançar</p></button>\n\n          </div>\n\n            <div  *ngIf="existente" >\n\n            <button (click)="alterarConvenio()" ion-button>Alterar</button>\n\n            <button (click)="excluirConvenio()" ion-button color="danger">Excluir</button>\n\n         </div>\n\n      </div>\n\n\n\n</div>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\brunoasilva\Documents\study\front-admin\adminApp\src\pages\cadastro-convenio\cadastro-convenio.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_convenio_convenio__["a" /* ConvenioProvider */]])
     ], CadastroConvenioPage);
@@ -2399,9 +2399,10 @@ var ExperienciaProvider = (function () {
     };
     ExperienciaProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ToastController */]) === "function" && _b || Object])
     ], ExperienciaProvider);
     return ExperienciaProvider;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=experiencia.js.map

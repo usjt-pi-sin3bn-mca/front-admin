@@ -25768,6 +25768,8 @@ cadastro-partidas .central {
   -webkit-box-shadow: 0px 5px 25px #b2bec3;
   box-shadow: 0px 5px 25px #b2bec3;
   padding: 20px;
+  position: absolute;
+  top: 0;
 }
 
 cadastro-partidas .titulo-cadastro {
@@ -26340,8 +26342,6 @@ login-screen .coluna-direita .preencher #inpUsuario, login-screen .coluna-direit
   border: 1px;
   height: 18%;
   width: 100%;
-  -webkit-box-shadow: -5px 5px 16px #192a56;
-  box-shadow: -5px 5px 16px #192a56;
   padding: 0px 13px 3px;
   font-weight: bold;
 }

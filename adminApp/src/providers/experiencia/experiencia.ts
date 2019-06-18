@@ -9,30 +9,30 @@ import { ToastController } from 'ionic-angular';
   and Angular DI.
 */
 @Injectable()
-export class ExperienciaProvider  {
+export class ExperienciaProvider {
   // private baseApiPath = 'http://rock.lucasduarte.club/maestro/api/';
   private baseApiPath = 'http://maestro.lucasduarte.club/api/';
   public apiResult: any;
   data: any;
   headers: any;
- 
-    
+
+
   constructor(public http: HttpClient, public toastController: ToastController) {
-      
+
   }
   cadastrarExperiencia(body) {
     return new Promise(
-          result => {
-                this.http.post(this.baseApiPath + 'experiencia', body,{
-                      headers: new HttpHeaders().set('Content-Type', 'application/json')
-                })
-                      .subscribe(data => {
-                            console.log(data);
-                            
-                      }, (error) => {
-                            console.log(error);
-                      });
-          }
+      result => {
+        this.http.post(this.baseApiPath + 'experiencia', body, {
+          headers: new HttpHeaders().set('Content-Type', 'application/json')
+        })
+          .subscribe(data => {
+            console.log(data);
+
+          }, (error) => {
+            console.log(error);
+          });
+      }
     );
   }
   getExperiencia() {
@@ -46,9 +46,9 @@ export class ExperienciaProvider  {
           this.data = data;
           resolve(this.data);
         },
-        (error) => {
-          console.log("Erro no provider Experiencia");
-        });
+          (error) => {
+            console.log("Erro no provider Experiencia");
+          });
     });
 
   }
