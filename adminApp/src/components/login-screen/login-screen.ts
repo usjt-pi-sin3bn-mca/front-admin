@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CadastroPage } from '../../pages/cadastro/cadastro';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { UserProvider } from '../../providers/user/user';
 
@@ -37,24 +36,21 @@ export class LoginScreenComponent {
     toast.present();
   }
   fazerLogin() {
-    this.navCtrl.setRoot(HomePage);
-    // this._loginProvider.loginUsuario(this.login); 
+    this._loginProvider.loginUsuario(this.login); 
 
-    // setTimeout(() =>{
-    //   console.log("Teste", UsuarioLogado.getInstance().getUsuario());
-    //   if(UsuarioLogado.getInstance().getUsuario()!= null){
-    //     this.navCtrl.setRoot(HomePage);
-    //   }
-    //   else{
-    //       this.erro();
-    //   }
-    // }, 2000);
+    setTimeout(() =>{
+      console.log("Teste", UsuarioLogado.getInstance().getUsuario());
+      if(UsuarioLogado.getInstance().getUsuario()!= null){
+        this.navCtrl.setRoot(HomePage);
+      }
+      else{
+          this.erro();
+      }
+    }, 2000);
     
   }
-   
-  goForm() {
-    this.navCtrl.setRoot(CadastroPage);
-  }
+
+
 }
 
 
